@@ -23,7 +23,7 @@ const Home = () => {
             <div className="hero-content">
               <h1 className="hero-title">Create & Conquer 2025</h1>
               <p className="hero-tagline">Bringing together students, visionary thinkers, and developers from across Metro Manila and the Philippines</p>
-              <p className="hero-dates">June 27 - July 5, 2025 | <br></br>FEU Tech Innovation Center, Manila</p>
+              <p className="hero-dates"><i className="fas fa-calendar-alt"></i> June 27 - July 5, 2025 |<br></br> <i className="fas fa-map-marker-alt"></i> FEU Tech Innovation Center, Manila</p>
               <div className="hero-cta">
                 <Link to="/registration" className="btn btn-primary">Register Now</Link>
                 <Link to="/about" className="btn btn-secondary">Learn More</Link>
@@ -44,11 +44,11 @@ const Home = () => {
             </p>
             <div className="intro-features">
               <div className="feature">
-                <span className="feature-icon">✅</span>
+                <span className="feature-icon"><i className="fas fa-check-circle"></i></span>
                 <p><strong>No coding experience needed!</strong> This event is open to all skill levels.</p>
               </div>
               <div className="feature">
-                <span className="feature-icon">🌐</span>
+                <span className="feature-icon"><i className="fas fa-globe"></i></span>
                 <p><strong>Hybrid format:</strong> Face-to-face (Metro Manila) & Online (for remote participants)</p>
               </div>
             </div>
@@ -65,17 +65,17 @@ const Home = () => {
           <h2 className="section-title">Key Highlights</h2>
           <div className="highlights-grid">
             <div className="highlight-card">
-              <div className="highlight-icon">🏆</div>
+              <div className="highlight-icon"><i className="fas fa-trophy"></i></div>
               <h3>₱9,500 Prize Pool</h3>
               <p>Compete for exciting cash prizes and special awards</p>
             </div>
             <div className="highlight-card">
-              <div className="highlight-icon">📆</div>
+              <div className="highlight-icon"><i className="fas fa-calendar-check"></i></div>
               <h3>Event Dates</h3>
               <p>June 27 - July 5, 2025</p>
             </div>
             <div className="highlight-card">
-              <div className="highlight-icon">📝</div>
+              <div className="highlight-icon"><i className="fas fa-clipboard-list"></i></div>
               <h3>Registration</h3>
               <p>June 9 - June 23, 2025</p>
             </div>
@@ -87,7 +87,7 @@ const Home = () => {
       <section className="section countdown-section">
         <div className="container">
           <h2 className="section-title">Registration Closing In</h2>
-          <p>Registration Period: June 9 - June 23, 2025</p>
+          <p><i className="fas fa-calendar-alt"></i> Registration Period: June 9 - June 23, 2025</p>
           <CountdownTimer targetDate={registrationDeadline} />
           <div className="countdown-cta">
             <Link to="/registration" className="btn btn-primary">Secure Your Spot</Link>
@@ -101,22 +101,22 @@ const Home = () => {
           <h2 className="section-title">Key Details</h2>
           <div className="details-grid">
             <div className="detail-card">
-              <div className="detail-icon">👨‍👩‍👧‍👦</div>
+              <div className="detail-icon"><i className="fas fa-users"></i></div>
               <h3>Team Size</h3>
               <p>4-6 members per team</p>
             </div>
             <div className="detail-card">
-              <div className="detail-icon">🎓</div>
+              <div className="detail-icon"><i className="fas fa-graduation-cap"></i></div>
               <h3>Eligibility</h3>
               <p>JHS, SHS, and undergraduate students in the Philippines</p>
             </div>
             <div className="detail-card">
-              <div className="detail-icon">🌐</div>
+              <div className="detail-icon"><i className="fas fa-globe-asia"></i></div>
               <h3>Hybrid Format</h3>
               <p>In-person & online options available</p>
             </div>
             <div className="detail-card">
-              <div className="detail-icon">💰</div>
+              <div className="detail-icon"><i className="fas fa-coins"></i></div>
               <h3>Registration Fees</h3>
               <p>Early bird & regular pricing options available</p>
             </div>
@@ -131,15 +131,15 @@ const Home = () => {
           <div className="important-dates">
             <div className="date-item">
               <h3>Registration</h3>
-              <p>June 9 - June 23, 2025</p>
+              <p><i className="fas fa-calendar-day"></i> June 9 - June 23, 2025</p>
             </div>
             <div className="date-item">
               <h3>Orientation & Kickoff</h3>
-              <p>June 27, 2025</p>
+              <p><i className="fas fa-flag"></i> June 27, 2025</p>
             </div>
             <div className="date-item">
               <h3>Final Demo Day & Awarding</h3>
-              <p>July 5, 2025</p>
+              <p><i className="fas fa-award"></i> July 5, 2025</p>
             </div>
           </div>
           <Timeline />
@@ -156,14 +156,14 @@ const Home = () => {
                 <img src={cpeoLogo} alt="Computer Engineering Organization Logo" />
               </div>
               <h3>Computer Engineering Organization (CPEO)</h3>
-              <p>FEU Tech</p>
+              <p><i className="fas fa-university"></i> FEU Tech</p>
             </div>
             <div className="organizer-card">
               <div className="organizer-logo">
                 <img src={fticLogo} alt="FEU Tech Innovation Center Logo" />
               </div>
               <h3>FEU Innovation Center</h3>
-              <p>FEU Tech</p>
+              <p><i className="fas fa-university"></i> FEU Tech</p>
             </div>
           </div>
         </div>

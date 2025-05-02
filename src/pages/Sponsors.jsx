@@ -22,7 +22,7 @@ const Sponsors = () => {
     const timer = setTimeout(() => {
       // Partners animation
       if (partnersRef.current) {
-        const partnerCards = partnersRef.current.querySelectorAll('.partner-card');
+        const partnerCards = partnersRef.current.querySelectorAll('.card.feature-card');
         if (partnerCards && partnerCards.length > 0) {
           gsap.from(partnerCards, {
             y: 30,
@@ -40,7 +40,7 @@ const Sponsors = () => {
       
       // Benefits animation
       if (benefitsRef.current) {
-        const benefitCards = benefitsRef.current.querySelectorAll('.benefit-card');
+        const benefitCards = benefitsRef.current.querySelectorAll('.card');
         if (benefitCards && benefitCards.length > 0) {
           gsap.from(benefitCards, {
             scale: 0.9,

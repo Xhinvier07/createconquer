@@ -36,7 +36,7 @@ const Resources = () => {
       }
       
       if (guidesRef.current) {
-        const guides = guidesRef.current.querySelectorAll('.resource-card');
+        const guides = guidesRef.current.querySelectorAll('.card');
         if (guides && guides.length > 0) {
           gsap.from(guides, {
             y: 30,

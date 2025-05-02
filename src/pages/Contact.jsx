@@ -68,7 +68,7 @@ const Contact = () => {
       
       // Animate FAQ items
       if (faqRef.current) {
-        const faqItems = faqRef.current.querySelectorAll('.faq-item');
+        const faqItems = faqRef.current.querySelectorAll('.card.faq-card');
         if (faqItems && faqItems.length > 0) {
           gsap.from(faqItems, {
             y: 30,

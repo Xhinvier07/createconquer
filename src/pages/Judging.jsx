@@ -20,7 +20,7 @@ const Judging = () => {
     const timer = setTimeout(() => {
       // Criteria cards staggered animation
       if (criteriaRef.current) {
-        const criteriaCards = criteriaRef.current.querySelectorAll('.criterion-card');
+        const criteriaCards = criteriaRef.current.querySelectorAll('.card.criterion-card');
         if (criteriaCards && criteriaCards.length > 0) {
           gsap.from(criteriaCards, {
             y: 30,
@@ -56,7 +56,7 @@ const Judging = () => {
       
       // Prize cards animation
       if (prizesRef.current) {
-        const prizeCards = prizesRef.current.querySelectorAll('.prize-card');
+        const prizeCards = prizesRef.current.querySelectorAll('.card.prize-card');
         if (prizeCards && prizeCards.length > 0) {
           gsap.from(prizeCards, {
             y: 40,
