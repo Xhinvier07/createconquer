@@ -23,8 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 /node_modules
-/package-lock.json
-/package.json
 /yarn.lock
 /yarn-debug.log*
 /yarn-error.log*
