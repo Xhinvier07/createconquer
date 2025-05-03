@@ -248,8 +248,8 @@
 
 .tab-button {
   padding: 1rem 2rem;
-  border: none;
-  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  background: #f5f5f5;
   font-weight: 600;
   font-size: 1.1rem;
   cursor: pointer;
@@ -258,21 +258,22 @@
   position: relative;
   border-radius: 8px;
   margin: 0 0.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .tab-button:hover {
   color: white;
   background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
+  border-color: transparent;
   box-shadow: 0 4px 15px rgba(33, 150, 243, 0.2);
   transform: translateY(-2px);
 }
 
 .tab-button.active {
-  color: var(--primary-blue);
-}
-
-.tab-button.active:hover {
   color: white;
+  background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(33, 150, 243, 0.2);
 }
 
 .tab-button.active::after {
@@ -286,11 +287,19 @@
   border-radius: 3px;
 }
 
+/* Add a hover state for active buttons to prevent losing styles */
+.tab-button.active:hover {
+  color: white;
+  background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
+  border-color: transparent;
+}
+
 .tab-button span {
   font-size: 0.8rem;
   opacity: 0.7;
   display: block;
   margin-top: 0.25rem;
+  color: inherit;
 }
 
 .fee-cards-container {
@@ -609,6 +618,7 @@
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--black);
+  padding-left: 50px;
 }
 
 .step-indicator.active .step-label {

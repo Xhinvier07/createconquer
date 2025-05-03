@@ -27,7 +27,7 @@
 .page-banner .container {
   position: relative;
   z-index: 2;
-  padding: 6rem 0 4rem;
+  padding: 3rem 0 2rem;
   text-align: center;
   color: white;
 }
@@ -250,17 +250,30 @@
   }
 }
 
-.prize-medal {
+.prizes-grid .card.prize-card {
+  position: relative !important;
+  border-top-width: 5px !important;
+  padding-top: 35px !important;
+  margin-top: 30px !important;
+  overflow: visible !important;
+}
+
+.prizes-grid .card.prize-card .prize-medal {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1rem;
   font-weight: 800;
   font-size: 1.5rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: absolute !important;
+  top: -30px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 100 !important;
+  margin: 0 !important;
 }
 
 .first-prize .prize-medal {
