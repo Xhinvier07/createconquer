@@ -281,7 +281,7 @@ const Judging = () => {
                   delay={0.2}
                 >
                   <p className="criterion-header">
-                    <span>How original and creative is the solution?</span>
+                    <span>How original and creative <br></br>is the solution?</span>
                     <span className="criterion-weight">30%</span>
                   </p>
                   <div className="criterion-details">
@@ -303,7 +303,7 @@ const Judging = () => {
                   delay={0.3}
                 >
                   <p className="criterion-header">
-                    <span>What is the potential impact of the solution?</span>
+                    <span>What is the potential impact <br></br>of the solution?</span>
                     <span className="criterion-weight">10%</span>
                   </p>
                   <div className="criterion-details">
@@ -347,7 +347,7 @@ const Judging = () => {
                   delay={0.5}
                 >
                   <p className="criterion-header">
-                    <span>How relevant and feasible is the solution?</span>
+                    <span>How relevant and feasible <br></br>is the solution?</span>
                     <span className="criterion-weight">20%</span>
                   </p>
                   <div className="criterion-details">
