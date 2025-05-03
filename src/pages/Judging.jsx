@@ -122,6 +122,12 @@ const Judging = () => {
             scrollTrigger: {
               trigger: rulesRef.current,
               start: "top 80%",
+              onEnter: () => {
+                const section = rulesRef.current.closest('.rulebook-section');
+                if (section) {
+                  section.classList.add('is-visible');
+                }
+              }
             }
           }
         );
@@ -143,6 +149,12 @@ const Judging = () => {
             scrollTrigger: {
               trigger: projectTypesRef.current,
               start: "top 80%",
+              onEnter: () => {
+                const section = projectTypesRef.current.closest('.project-types-section');
+                if (section) {
+                  section.classList.add('is-visible');
+                }
+              }
             }
           }
         );
@@ -605,7 +617,9 @@ const Judging = () => {
               
               <div className="rules-grid" ref={rulesRef}>
                 <div className="rule-card">
-                  <div className="rule-icon">👥</div>
+                  <div className="rule-icon">
+                    <i className="fas fa-users"></i>
+                  </div>
                   <h3>Eligibility Requirements</h3>
                   <ul className="rule-list">
                     <li>Open to junior high school, senior high school, and undergraduate students in the Philippines</li>
@@ -617,14 +631,18 @@ const Judging = () => {
                 </div>
 
                 <div className="rule-card">
-                  <div className="rule-icon">💻</div>
+                  <div className="rule-icon">
+                    <i className="fas fa-laptop-code"></i>
+                  </div>
                   <h3>Skill Requirements</h3>
                   <p>No coding experience is necessary to participate in the hackathon. We welcome participants of all skill levels, from beginners to advanced developers.</p>
                   <p>Teams will have the option to choose whether to use code or no-code tools for their projects. The judging criteria will be adjusted accordingly to ensure fairness.</p>
                 </div>
 
                 <div className="rule-card">
-                  <div className="rule-icon">🧩</div>
+                  <div className="rule-icon">
+                    <i className="fas fa-puzzle-piece"></i>
+                  </div>
                   <h3>Pre-existing Work</h3>
                   <ul className="rule-list">
                     <li>All projects must be created during the hackathon period</li>
@@ -635,7 +653,9 @@ const Judging = () => {
                 </div>
 
                 <div className="rule-card">
-                  <div className="rule-icon">📜</div>
+                  <div className="rule-icon">
+                    <i className="fas fa-scroll"></i>
+                  </div>
                   <h3>Event Rules & Conditions</h3>
                   <ul className="rule-list">
                     <li>All participants must adhere to the Code of Conduct</li>
@@ -647,7 +667,9 @@ const Judging = () => {
                 </div>
 
                 <div className="rule-card">
-                  <div className="rule-icon">🏢</div>
+                  <div className="rule-icon">
+                    <i className="fas fa-building"></i>
+                  </div>
                   <h3>Use of Facilities</h3>
                   <ul className="rule-list">
                     <li>In-person participants must respect the venue's rules and facilities</li>
@@ -685,55 +707,73 @@ const Judging = () => {
               
               <div className="project-types-grid" ref={projectTypesRef}>
                 <div className="project-type">
-                  <div className="project-type-icon">📱</div>
+                  <div className="project-type-icon">
+                    <i className="fas fa-mobile-alt"></i>
+                  </div>
                   <h3>Mobile Application</h3>
                   <p>Android, iOS, or cross-platform mobile apps</p>
                 </div>
 
                 <div className="project-type">
-                  <div className="project-type-icon">🌐</div>
+                  <div className="project-type-icon">
+                    <i className="fas fa-globe"></i>
+                  </div>
                   <h3>Web Application</h3>
                   <p>Dynamic web applications with frontend and/or backend components</p>
                 </div>
 
                 <div className="project-type">
-                  <div className="project-type-icon">🎮</div>
+                  <div className="project-type-icon">
+                    <i className="fas fa-gamepad"></i>
+                  </div>
                   <h3>Game</h3>
                   <p>Digital games for mobile, web, or desktop platforms</p>
                 </div>
 
                 <div className="project-type">
-                  <div className="project-type-icon">🧩</div>
+                  <div className="project-type-icon">
+                    <i className="fas fa-puzzle-piece"></i>
+                  </div>
                   <h3>Web Extension</h3>
                   <p>Browser extensions that enhance web browsing experience</p>
                 </div>
 
                 <div className="project-type">
-                  <div className="project-type-icon">💻</div>
+                  <div className="project-type-icon">
+                    <i className="fas fa-laptop"></i>
+                  </div>
                   <h3>Website</h3>
                   <p>Static or content-focused websites</p>
                 </div>
 
                 <div className="project-type">
-                  <div className="project-type-icon">📊</div>
+                  <div className="project-type-icon">
+                    <i className="fas fa-chart-line"></i>
+                  </div>
                   <h3>IoT</h3>
                   <p>Internet of Things projects with hardware components</p>
                 </div>
 
                 <div className="project-type">
-                  <div className="project-type-icon">🔌</div>
+                  <div className="project-type-icon">
+                    <i className="fas fa-microchip"></i>
+                  </div>
                   <h3>Hardware</h3>
                   <p>Physical computing projects and hardware prototypes</p>
                 </div>
 
                 <div className="project-type">
-                  <div className="project-type-icon">🤖</div>
+                  <div className="project-type-icon">
+                    <i className="fas fa-robot"></i>
+                  </div>
                   <h3>Robot</h3>
                   <p>Robotics projects with mechanical and electronic components</p>
                 </div>
 
                 <div className="project-type">
-                  <div className="project-type-icon">💡</div>
+                  <div className="project-type-icon">
+                    <i className="fas fa-lightbulb"></i>
+                  </div>
                   <h3>Other</h3>
                   <p>Other technological outputs with approval from organizers</p>
                 </div>
@@ -760,13 +800,17 @@ const Judging = () => {
               </motion.h2>
               
               <div className="submission-rounds" ref={submissionRef}>
-                <div className="submission-round">
+                <div className="submission-round elimination-round">
                   <h3>Elimination Round Requirements</h3>
-                  <p className="deadline">Deadline: June 30, 2025 (Monday) | 1:00 PM</p>
+                  <p className="deadline">
+                    <i className="fas fa-calendar-alt"></i> Deadline: June 30, 2025 (Monday) | 1:00 PM
+                  </p>
                   
                   <div className="submission-items">
                     <div className="submission-item">
-                      <div className="submission-icon">📋</div>
+                      <div className="submission-icon">
+                        <i className="fas fa-file-alt"></i>
+                      </div>
                       <div className="submission-content">
                         <h4>Proof of Concept</h4>
                         <p>A preliminary version of your project that demonstrates its core functionality</p>
@@ -774,7 +818,9 @@ const Judging = () => {
                     </div>
                     
                     <div className="submission-item">
-                      <div className="submission-icon">📝</div>
+                      <div className="submission-icon">
+                        <i className="fas fa-file-signature"></i>
+                      </div>
                       <div className="submission-content">
                         <h4>Project Brief</h4>
                         <p>A document explaining your project's purpose, target users, and how it addresses the hackathon theme</p>
@@ -782,7 +828,9 @@ const Judging = () => {
                     </div>
                     
                     <div className="submission-item">
-                      <div className="submission-icon">🎬</div>
+                      <div className="submission-icon">
+                        <i className="fas fa-film"></i>
+                      </div>
                       <div className="submission-content">
                         <h4>Short Video Demo/Presentation</h4>
                         <p>A 2-3 minute video demonstrating your project and explaining its features</p>
@@ -790,7 +838,9 @@ const Judging = () => {
                     </div>
                     
                     <div className="submission-item">
-                      <div className="submission-icon">🔗</div>
+                      <div className="submission-icon github-icon">
+                        <i className="fab fa-github"></i>
+                      </div>
                       <div className="submission-content">
                         <h4>Link to Project Github (Optional)</h4>
                         <p>For code-based projects, provide a link to your GitHub repository</p>
@@ -801,14 +851,20 @@ const Judging = () => {
                 
                 <div className="submission-round">
                   <h3>Final Round Requirements</h3>
-                  <p className="deadline">Deadline: July 4, 2025 (Friday) | 11:59 PM</p>
+                  <p className="deadline">
+                    <i className="fas fa-calendar-alt"></i> Deadline: July 4, 2025 (Friday) | 11:59 PM
+                  </p>
                   
                   <div className="submission-categories">
-                    <div className="submission-category">
-                      <h4>For No-Code Participants</h4>
+                    <div className="submission-category no-code-category">
+                      <h4 className="category-header no-code-header">
+                        <i className="fas fa-wand-magic-sparkles"></i> For No-Code Participants
+                      </h4>
                       <div className="submission-items">
                         <div className="submission-item">
-                          <div className="submission-icon">📋</div>
+                          <div className="submission-icon">
+                            <i className="fas fa-file-alt"></i>
+                          </div>
                           <div className="submission-content">
                             <h4>Finalized Proof of Concept</h4>
                             <p>The completed version of your no-code project</p>
@@ -816,7 +872,9 @@ const Judging = () => {
                         </div>
                         
                         <div className="submission-item">
-                          <div className="submission-icon">📝</div>
+                          <div className="submission-icon">
+                            <i className="fas fa-file-signature"></i>
+                          </div>
                           <div className="submission-content">
                             <h4>Finalized Project Brief</h4>
                             <p>An updated document explaining your project in detail</p>
@@ -824,7 +882,9 @@ const Judging = () => {
                         </div>
                         
                         <div className="submission-item">
-                          <div className="submission-icon">🖼️</div>
+                          <div className="submission-icon">
+                            <i className="fas fa-desktop"></i>
+                          </div>
                           <div className="submission-content">
                             <h4>Presentation Deck</h4>
                             <p>Slides for your final presentation during Demo Day</p>
@@ -832,7 +892,9 @@ const Judging = () => {
                         </div>
                         
                         <div className="submission-item">
-                          <div className="submission-icon">🎬</div>
+                          <div className="submission-icon">
+                            <i className="fas fa-video"></i>
+                          </div>
                           <div className="submission-content">
                             <h4>30-second Project Video Teaser</h4>
                             <p>A brief promotional video highlighting your project</p>
@@ -841,11 +903,15 @@ const Judging = () => {
                       </div>
                     </div>
                     
-                    <div className="submission-category">
-                      <h4>For Code Participants</h4>
+                    <div className="submission-category code-category">
+                      <h4 className="category-header code-header">
+                        <i className="fas fa-code"></i> For Code Participants
+                      </h4>
                       <div className="submission-items">
                         <div className="submission-item">
-                          <div className="submission-icon">📋</div>
+                          <div className="submission-icon">
+                            <i className="fas fa-file-alt"></i>
+                          </div>
                           <div className="submission-content">
                             <h4>Finalized Proof of Concept</h4>
                             <p>The completed version of your coded project</p>
@@ -853,7 +919,9 @@ const Judging = () => {
                         </div>
                         
                         <div className="submission-item">
-                          <div className="submission-icon">📝</div>
+                          <div className="submission-icon">
+                            <i className="fas fa-file-signature"></i>
+                          </div>
                           <div className="submission-content">
                             <h4>Finalized Project Brief</h4>
                             <p>An updated document explaining your project in detail</p>
@@ -861,7 +929,9 @@ const Judging = () => {
                         </div>
                         
                         <div className="submission-item">
-                          <div className="submission-icon">💾</div>
+                          <div className="submission-icon">
+                            <i className="fas fa-code-branch"></i>
+                          </div>
                           <div className="submission-content">
                             <h4>Code Submission (GitHub repository)</h4>
                             <p>A public or private GitHub repository containing your project code</p>
@@ -869,7 +939,9 @@ const Judging = () => {
                         </div>
                         
                         <div className="submission-item">
-                          <div className="submission-icon">🖼️</div>
+                          <div className="submission-icon">
+                            <i className="fas fa-desktop"></i>
+                          </div>
                           <div className="submission-content">
                             <h4>Presentation Deck</h4>
                             <p>Slides for your final presentation during Demo Day</p>
@@ -877,7 +949,9 @@ const Judging = () => {
                         </div>
                         
                         <div className="submission-item">
-                          <div className="submission-icon">🎬</div>
+                          <div className="submission-icon">
+                            <i className="fas fa-video"></i>
+                          </div>
                           <div className="submission-content">
                             <h4>30-second Project Video Teaser</h4>
                             <p>A brief promotional video highlighting your project</p>
@@ -890,7 +964,9 @@ const Judging = () => {
               </div>
               
               <div className="submission-notes">
-                <h3>Important Submission Notes</h3>
+                <h3>
+                  <i className="fas fa-exclamation-circle"></i> Important Submission Notes
+                </h3>
                 <ul>
                   <li>All submissions must be made through the official hackathon platform</li>
                   <li>Late submissions will not be accepted</li>
