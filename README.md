@@ -1,4 +1,6 @@
-<img src="src/assets/banner.png" alt="CREATE & CONQUER 2025 Hackathon" width="80%" style="margin:auto;">
+<p align="center">
+  <img src="src/assets/banner.png" alt="CREATE & CONQUER 2025 Hackathon" width="80%">
+</p>
 
 # CREATE & CONQUER 2025 Hackathon
 
