@@ -174,7 +174,7 @@ const Registration = () => {
         <AnimatedSection className="section registration-fees-section">
           <div className="container">
             <motion.h2 
-              className="section-title text-center"
+              className="section-title"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -295,7 +295,7 @@ const Registration = () => {
         <AnimatedSection className="section registration-form-section">
           <div className="container">
             <motion.h2 
-              className="section-title text-center"
+              className="section-title"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -780,12 +780,6 @@ const Registration = () => {
                   <a href="/consent-form.pdf" className="btn btn-primary download-btn" target="_blank" rel="noopener noreferrer">
                     <i className="fas fa-download"></i> Download Form
                   </a>
-                  <div className="upload-container">
-                    <button className="btn btn-secondary upload-btn">
-                      <i className="fas fa-upload"></i> Upload Completed Form
-                    </button>
-                    <input type="file" id="consentFormUpload" accept=".pdf,.jpg,.jpeg,.png" className="hidden-upload" />
-                  </div>
                 </div>
               </div>
             </div>
@@ -795,7 +789,7 @@ const Registration = () => {
         <AnimatedSection className="section registration-process-section">
           <div className="container">
             <motion.h2 
-              className="section-title text-center"
+              className="section-title"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -851,7 +845,7 @@ const Registration = () => {
         <AnimatedSection className="section registration-faq-section">
           <div className="container">
             <motion.h2 
-              className="section-title text-center"
+              className="section-title"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

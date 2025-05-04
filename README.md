@@ -1,12 +1,53 @@
-# React + Vite
+<img src="src/assets/banner.png" alt="CREATE & CONQUER 2025 Hackathon" width="100%">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# CREATE & CONQUER 2025 Hackathon
 
-Currently, two official plugins are available:
+## About
+CREATE & CONQUER 2025 is the inaugural hackathon organized by the FEU Institute of Technology's Computer Engineering Organization (CPEO). This event brings together students, visionary thinkers, and developers from across Metro Manila and the Philippines to collaborate, innovate, and solve real-world challenges.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Event Details
+- **Dates**: June 27 - July 5, 2025
+- **Location**: FEU Tech Innovation Center, Manila
+- **Format**: Hybrid (In-person & Online options)
+- **Registration**: June 9 - June 23, 2025
+- **Prize Pool**: ₱9,500
 
-## Expanding the ESLint configuration
+## Key Features
+- Open to all skill levels - no coding experience needed!
+- Team size: 4-6 members
+- Eligibility: Junior High School, Senior High School, and undergraduate students in the Philippines
+- Early bird & regular pricing options available
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Website Content
+This React website includes:
+- Home page with event highlights and countdown timer
+- About page with detailed information about the hackathon
+- Registration page for participants
+- Event details page with schedule and format information
+- Rules and guidelines
+- Judging criteria
+- Resources for participants
+- Contact information
+
+## Tech Stack
+- React 
+- React Router for navigation
+- Vite for fast development and building
+
+## Development
+This project was created using Vite and React. To run the project locally:
+
+```bash
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## Organized By
+- Computer Engineering Organization (CPEO) - FEU Tech
+- FEU Tech Innovation Center

@@ -1,0 +1,1030 @@
+/* Judging and Rules Page Styling */
+.judging-rules-page {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Banner styling (matching EventDetails.css) */
+.judging-rules-page .page-banner {
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  position: relative;
+  overflow: hidden;
+}
+
+.judging-rules-page .page-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 30% 40%, rgba(0, 230, 118, 0.15), transparent 35%),
+    radial-gradient(circle at 70% 60%, rgba(33, 150, 243, 0.15), transparent 35%);
+  z-index: 0;
+}
+
+.page-banner .container {
+  position: relative;
+  z-index: 2;
+  padding: 3rem 0 2rem;
+  text-align: center;
+  color: white;
+}
+
+.page-banner h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #00E676, #2196F3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.page-banner p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* Tab Navigation */
+.tab-navigation-container {
+  background-color: var(--dark-gray);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  padding: 0.75rem 0;
+  gap: 1.5rem;
+}
+
+.tab-button {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 30px;
+  color: var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tab-button i {
+  font-size: 1.1rem;
+}
+
+.tab-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.tab-button.active {
+  background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
+  color: var(--white);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Section Styling - matching EventDetails.css */
+.section {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-green), var(--primary-blue));
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+/* Criteria Cards */
+.judging-criteria-section .criteria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 992px) {
+  .judging-criteria-section .criteria-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .judging-criteria-section .criteria-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.criterion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.criterion-weight {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.criterion-details h4 {
+  margin-bottom: 0.5rem;
+  color: var(--black);
+}
+
+.criterion-details ul {
+  padding-left: 1.2rem;
+}
+
+.criterion-details li {
+  margin-bottom: 0.3rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Prize Cards */
+.prizes-section {
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+}
+
+.prizes-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300e676' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.prizes-category-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: var(--black);
+  position: relative;
+  z-index: 1;
+}
+
+.prizes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.special-prizes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 992px) {
+  .prizes-grid,
+  .special-prizes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .prizes-grid,
+  .special-prizes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.prizes-grid .card.prize-card {
+  position: relative !important;
+  border-top-width: 5px !important;
+  padding-top: 35px !important;
+  margin-top: 30px !important;
+  overflow: visible !important;
+}
+
+.prizes-grid .card.prize-card .prize-medal {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: absolute !important;
+  top: -30px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 100 !important;
+  margin: 0 !important;
+}
+
+.first-prize .prize-medal {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: white;
+}
+
+.second-prize .prize-medal {
+  background: linear-gradient(135deg, #C0C0C0, #A9A9A9);
+  color: white;
+}
+
+.third-prize .prize-medal {
+  background: linear-gradient(135deg, #CD7F32, #8B4513);
+  color: white;
+}
+
+.card.prize-card h4 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.prize-amount {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+  color: var(--primary-blue);
+}
+
+.special-prize .prize-amount {
+  font-size: 1.5rem;
+}
+
+.prize-perks {
+  list-style-type: none;
+  padding: 0;
+}
+
+.prize-perks li {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.prize-perks li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--primary-green);
+}
+
+/* Judging Process Section */
+.judging-process-section {
+  position: relative;
+  background-color: #f5f8ff;
+  overflow: hidden;
+}
+
+.judging-process-section::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(33, 150, 243, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.process-steps {
+  padding: 2rem 0 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.process-steps:before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background: linear-gradient(to bottom, var(--primary-blue), var(--primary-green));
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  margin-left: -1px;
+  z-index: 0;
+}
+
+.process-step {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 60px;
+  z-index: 1;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.step-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.step-content h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--black);
+}
+
+.step-content p {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.6;
+}
+
+/* Judges Section */
+.judges-section {
+  position: relative;
+}
+
+.judges-note {
+  background-color: rgba(33, 150, 243, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  border-left: 5px solid var(--primary-blue);
+}
+
+.judges-note p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.judges-note strong {
+  color: var(--black);
+}
+
+/* Rules Styling */
+.rulebook-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.rulebook-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(0, 230, 118, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.rule-card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.rule-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.rule-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(to right, var(--primary-blue), var(--primary-green));
+}
+
+.rule-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.rule-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--black);
+  font-size: 1.3rem;
+}
+
+.rule-list {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.rule-list li {
+  margin-bottom: 0.8rem;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.5;
+}
+
+.rule-card p {
+  margin: 0 0 1rem;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.6;
+}
+
+/* Project Types */
+.project-types-section {
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.project-type {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.project-type:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.project-type-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-type h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: var(--black);
+}
+
+.project-type p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.project-types-note {
+  text-align: center;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.7);
+  margin-top: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.project-types-note a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Submission Guide */
+.submission-guide-section {
+  position: relative;
+}
+
+.submission-guide-section .section-title::after {
+  background: var(--primary-green);
+}
+
+.submission-round {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.elimination-round h3 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.elimination-round .deadline {
+  margin-bottom: 2rem;
+  background-color: rgba(33, 150, 243, 0.08);
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.2rem;
+}
+
+.elimination-round .deadline i {
+  color: #1976d2;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.elimination-round .submission-content h4 {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem;
+  color: var(--black);
+}
+
+.elimination-round .submission-content p {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.5;
+}
+
+.submission-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Special 2x2 grid layout ONLY for elimination round */
+.elimination-round .submission-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Special styling for the elimination round items to match screenshot */
+.elimination-round .submission-items .submission-item {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  height: 100%;
+}
+
+.elimination-round .submission-icon {
+  font-size: 2rem;
+  color: var(--primary-blue);
+}
+
+.elimination-round .submission-icon i {
+  color: #1976d2;
+}
+
+/* GitHub icon specific styling */
+.github-icon i {
+  color: #333 !important;
+}
+
+.submission-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.submission-item:hover {
+  background: rgba(0, 0, 0, 0.03);
+  transform: translateY(-3px);
+}
+
+.submission-icon {
+  font-size: 2rem;
+  color: var(--primary-blue);
+}
+
+.submission-content h4 {
+  margin: 0 0 0.5rem;
+  color: var(--black);
+}
+
+.submission-content p {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.5;
+}
+
+.submission-categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.submission-category {
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.no-code-category {
+  background-color: rgba(0, 230, 118, 0.05);
+  border-left: 5px solid var(--primary-green);
+}
+
+.code-category {
+  background-color: rgba(33, 150, 243, 0.05);
+  border-left: 5px solid var(--primary-blue);
+}
+
+.category-header {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.no-code-header {
+  color: var(--primary-green);
+}
+
+.no-code-header i {
+  color: var(--primary-green);
+  margin-right: 0.5rem;
+}
+
+.code-header {
+  color: var(--primary-blue);
+}
+
+.code-header i {
+  color: var(--primary-blue);
+  margin-right: 0.5rem;
+}
+
+.submission-notes {
+  background: rgba(255, 235, 59, 0.1);
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  border-left: 5px solid #FFC107;
+  margin-top: 2rem;
+}
+
+.submission-notes h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.submission-notes ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.submission-notes li {
+  margin-bottom: 0.8rem;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.5;
+}
+
+/* CTA Section */
+.cta-section {
+  margin-top: 4rem;
+  padding: 4rem 0;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+}
+
+.cta-section:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  z-index: 0;
+}
+
+.cta-content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-content h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (max-width: 576px) {
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.btn-white {
+  background-color: white;
+  color: var(--primary-blue);
+}
+
+.btn-white:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-3px);
+}
+
+/* Animation overrides to prevent flickering */
+.gsap-marker-scroller-start, .gsap-marker-scroller-end, 
+.gsap-marker-start, .gsap-marker-end, 
+.gsap-marker {
+  display: none !important; 
+}
+
+.card, .rule-card, .project-type, .submission-item, .process-step {
+  opacity: 1;
+  transform: none;
+  will-change: transform, opacity;
+}
+
+.tab-content.active .card, 
+.tab-content.active .rule-card, 
+.tab-content.active .project-type, 
+.tab-content.active .submission-item, 
+.tab-content.active .process-step {
+  visibility: visible;
+}
+
+.tab-content:not(.active) .card, 
+.tab-content:not(.active) .rule-card, 
+.tab-content:not(.active) .project-type, 
+.tab-content:not(.active) .submission-item, 
+.tab-content:not(.active) .process-step {
+  visibility: hidden;
+}
+
+@media (max-width: 992px) {
+  .submission-categories {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Icon colors for no-code and code categories */
+.no-code-category .submission-icon i {
+  color: #00a651; /* Dark green color for no-code icons */
+}
+
+.code-category .submission-icon i {
+  color: #1976d2; /* Blue color for code icons */
+}
+
+/* Enhanced Icon Styling for Rules and Project Types */
+.rule-card .rule-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+  color: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.rule-card .rule-icon::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 230, 118, 0.4), rgba(33, 150, 243, 0.4));
+  top: -100%;
+  left: 0;
+  transition: all 0.5s ease;
+}
+
+.rule-card:hover .rule-icon {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.rule-card:hover .rule-icon::before {
+  top: 0;
+  animation: gradientPulse 2s infinite alternate;
+}
+
+/* Project Type Icon Animation */
+.project-type-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+  color: white;
+  position: relative;
+  transition: all 0.4s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-type-icon::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  top: 0;
+  left: 0;
+  animation: spin 10s linear infinite;
+  background: linear-gradient(90deg, var(--primary-green), var(--primary-blue), var(--primary-green)) border-box;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+.project-type:hover .project-type-icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Animations */
+@keyframes gradientPulse {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Staggered animations for visible elements */
+.rulebook-section.is-visible .rule-card:nth-child(1) .rule-icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+.rulebook-section.is-visible .rule-card:nth-child(2) .rule-icon {
+  animation: float 3s ease-in-out 0.2s infinite;
+}
+
+.rulebook-section.is-visible .rule-card:nth-child(3) .rule-icon {
+  animation: float 3s ease-in-out 0.4s infinite;
+}
+
+.rulebook-section.is-visible .rule-card:nth-child(4) .rule-icon {
+  animation: float 3s ease-in-out 0.6s infinite;
+}
+
+.rulebook-section.is-visible .rule-card:nth-child(5) .rule-icon {
+  animation: float 3s ease-in-out 0.8s infinite;
+}
+
+/* Make project type icons have a glowing effect on hover */
+.project-type:hover .project-type-icon i {
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--primary-green), 0 0 20px var(--primary-green);
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--primary-blue), 0 0 40px var(--primary-blue);
+  }
+}
+
+@media (max-width: 768px) {
+  .elimination-round .submission-items {
+    grid-template-columns: 1fr;
+  }
+} 

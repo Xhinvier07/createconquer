@@ -5,12 +5,11 @@ import './App.css'
 import Home from './pages/Home'
 import About from './pages/About'
 import Registration from './pages/Registration'
-import EventDetails from './pages/EventDetails'
+import EventDetails from './pages/EventDetails.jsx'
 import Rules from './pages/Rules'
 import Judging from './pages/Judging'
 import Resources from './pages/Resources'
 import Contact from './pages/Contact'
-import Sponsors from './pages/Sponsors'
 
 // Components
 import Navbar from './components/Navbar'
@@ -35,7 +34,6 @@ function App() {
               <Route path="/judging" element={<Judging />} />
               <Route path="/resources" element={<Resources />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/sponsors" element={<Sponsors />} />
             </Routes>
           </main>
           <Footer />

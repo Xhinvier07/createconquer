@@ -9,6 +9,7 @@
   background: linear-gradient(135deg, #000000, #1a1a1a);
   position: relative;
   overflow: hidden;
+  padding: 4rem 0 2rem;
 }
 
 .about-page .page-banner::before {
