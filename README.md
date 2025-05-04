@@ -1,4 +1,6 @@
-<img src="src/assets/banner.png" alt="CREATE & CONQUER 2025 Hackathon" width="80%" style="margin:auto;">
+<p align="center">
+  <img src="src/assets/banner.png" alt="CREATE & CONQUER 2025 Hackathon" width="80%">
+</p>
 
 # CREATE & CONQUER 2025 Hackathon
 
@@ -30,9 +32,15 @@ This React website includes:
 - Contact information
 
 ## Tech Stack
-- React 
-- React Router for navigation
-- Vite for fast development and building
+- React v19 - JavaScript library for building user interfaces
+- Vite v6 - Next generation frontend tooling
+- React Router v7 - Routing and navigation for React applications
+- TailwindCSS v4 - Utility-first CSS framework
+- Font Awesome v6 - Icon library and toolkit
+- Framer Motion v12 - Animation library for React
+- GSAP v3 - Professional-grade animation for the modern web
+- AOS - Animate On Scroll library
+- Three.js - 3D library for JavaScript
 
 ## Development
 This project was created using Vite and React. To run the project locally:
