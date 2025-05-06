@@ -399,6 +399,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   position: relative;
   overflow: hidden;
+  margin-top: 0;
 }
 
 .page-banner h1 {
@@ -643,7 +644,7 @@ button.btn {
   width: 100%;
 }
 
-.contact-info li {
+.contact-info-footer li {
   display: flex;
   align-items: flex-start;
   margin-bottom: 1rem;
@@ -651,7 +652,7 @@ button.btn {
   gap: 10px;
 }
 
-.contact-info li i {
+.contact-info-footer li i {
   color: var(--primary-green);
   margin-top: 3px;
 }
@@ -1444,5 +1445,79 @@ button.btn {
   
   .timeline-item::after {
     left: 15px;
+  }
+}
+
+/* Footer Bottom Sections - Put Follow Us and Organized By side-by-side */
+.footer-bottom-sections {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 2rem;
+}
+
+.footer-social-section {
+  flex: 1;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.footer-organizers {
+  flex: 1;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.footer-copyright p, .footer-contact p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.footer-organizer-logo {
+  width: 80px;
+  height: 80px;
+  padding: 1rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-organizer-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.organizer-logos {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Contact icon styling */
+.contact-icon {
+  color: var(--primary-blue) !important;
+  font-size: 1.1rem;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .footer-bottom-sections {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .organizer-logo {
+    width: 70px;
+    height: 70px;
+    padding: 0.8rem;
   }
 }
