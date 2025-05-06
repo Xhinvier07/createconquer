@@ -6,37 +6,37 @@ const Timeline = () => {
     {
       date: 'June 9, 2025',
       title: 'Registration Opens',
-      description: 'Early bird registration begins at 9AM'
+      description: 'Registration begins at 9AM.'
     },
     {
       date: 'June 23, 2025',
       title: 'Registration Closes',
-      description: 'Last day to submit team registrations by 11:59PM'
+      description: 'Last day for team registrations at 11:59PM.'
     },
     {
       date: 'June 27, 2025',
       title: 'Orientation & Kickoff',
-      description: 'Event kickoff, theme announcement, and workshops from 8AM to 4PM'
+      description: 'Event kickoff, theme announcement, and more! From 8AM to 4PM.'
     },
     {
       date: 'June 30, 2025',
       title: 'Proposal Deadline',
-      description: 'Deadline for all project proposals by 1PM'
+      description: 'Deadline for all project proposals by 1PM.'
     },
     {
       date: 'July 1, 2025',
       title: 'Finalists Announcement',
-      description: 'Top 8 finalists will be announced at 1PM'
+      description: 'Top 8 finalists will be announced at 1PM.'
     },
     {
       date: 'July 4, 2025',
       title: 'Final Submission',
-      description: 'Deadline for final project submissions by 11:59PM'
+      description: 'Deadline for final project submissions by 11:59PM.'
     },
     {
       date: 'July 5, 2025',
       title: 'Demo Day & Awarding',
-      description: 'Project demonstrations, judging, and awards ceremony from 8AM to 4PM'
+      description: 'Project demonstrations, judging, and awards ceremony from 8AM to 4PM.'
     }
   ];
 

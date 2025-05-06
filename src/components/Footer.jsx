@@ -54,14 +54,14 @@ const Footer = () => {
               <a href="https://facebook.com/feutechCpEO" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <a href="https://instagram.com/CpEOfeutech" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <a href="https://youtube.com/@CpEOfeutech" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                 <i className="fab fa-youtube"></i>
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <i className="fab fa-linkedin-in"></i>
+              <a href="https://x.com/CpEOfeutech" target="_blank" rel="noopener noreferrer" aria-label="X">
+                <i className="fa-brands fa-x-twitter"></i>
               </a>
             </div>
           </div>

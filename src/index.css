@@ -210,7 +210,7 @@ button:focus-visible {
 }
 
 .scrolled .navbar-links li a {
-  color: var(--dark-gray);
+  color: var(--black);
 }
 
 .navbar-links li a::after {
@@ -436,7 +436,7 @@ button:focus-visible {
   }
 
   .navbar-links li a {
-    color: var(--dark-gray);
+    color: var(--white);
     display: block;
     padding: 0.8rem 0;
     font-size: 1.2rem;
