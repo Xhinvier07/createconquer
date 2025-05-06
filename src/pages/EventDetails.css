@@ -316,16 +316,16 @@
   margin-top: 3rem;
 }
 
-.tab-navigation {
+.event-details-page .tab-navigation {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
   gap: 1rem;
 }
 
-.tab-button {
+.event-details-page .tab-button {
   padding: 1rem 2rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: #f5f5f5;
   border-radius: 8px;
   font-weight: 600;
@@ -339,21 +339,24 @@
   gap: 0.5rem;
 }
 
-.tab-button i {
+.event-details-page .tab-button i {
   color: var(--primary-blue);
 }
 
-.tab-button:hover {
+.event-details-page .tab-button:hover {
+  background-color: rgba(33, 150, 243, 0.1);
+  border-color: rgba(33, 150, 243, 0.5);
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.tab-button.active {
+.event-details-page .tab-button.active {
   background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
   color: white;
+  border-color: transparent;
 }
 
-.tab-button.active i {
+.event-details-page .tab-button.active i {
   color: white;
 }
 

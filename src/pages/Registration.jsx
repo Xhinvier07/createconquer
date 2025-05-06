@@ -153,8 +153,8 @@ const Registration = () => {
                   <i className="fas fa-calendar-alt"></i>
                 </div>
                 <h3>Key Dates</h3>
-                <p>Registration: June 9 - 23, 2025</p>
-                <p>Event: June 27 - July 5, 2025</p>
+                <p>Registration: <br></br>June 9 - 23, 2025</p>
+                <p>Event: <br></br>June 27 - July 5, 2025</p>
               </div>
               
               <div className="overview-card">

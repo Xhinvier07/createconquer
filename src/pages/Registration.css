@@ -239,14 +239,14 @@
   margin-top: 3rem;
 }
 
-.tab-selector {
+.registration-page .tab-selector {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
   position: relative;
 }
 
-.tab-button {
+.registration-page .tab-button {
   padding: 1rem 2rem;
   border: 2px solid rgba(0, 0, 0, 0.1);
   background: #f5f5f5;
@@ -261,22 +261,22 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.tab-button:hover {
-  color: white;
-  background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
-  border-color: transparent;
+.registration-page .tab-button:hover {
+  background: linear-gradient(135deg, rgba(0, 230, 118, 0.15), rgba(33, 150, 243, 0.15));
+  border-color: rgba(0, 230, 118, 0.5);
   box-shadow: 0 4px 15px rgba(33, 150, 243, 0.2);
   transform: translateY(-2px);
+  color: var(--black);
 }
 
-.tab-button.active {
+.registration-page .tab-button.active {
   color: white;
   background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
   border-color: transparent;
   box-shadow: 0 4px 15px rgba(33, 150, 243, 0.2);
 }
 
-.tab-button.active::after {
+.registration-page .tab-button.active::after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -288,13 +288,13 @@
 }
 
 /* Add a hover state for active buttons to prevent losing styles */
-.tab-button.active:hover {
+.registration-page .tab-button.active:hover {
   color: white;
   background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
   border-color: transparent;
 }
 
-.tab-button span {
+.registration-page .tab-button span {
   font-size: 0.8rem;
   opacity: 0.7;
   display: block;
