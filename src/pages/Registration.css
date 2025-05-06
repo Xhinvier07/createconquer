@@ -63,6 +63,12 @@
   background: linear-gradient(135deg, #000000, #1a1a1a);
   position: relative;
   overflow: hidden;
+  padding: 4rem 0 3rem;
+  margin-top: 0;
+  min-height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .registration-page .page-banner::before {
@@ -75,7 +81,40 @@
   background: 
     radial-gradient(circle at 30% 40%, rgba(0, 230, 118, 0.15), transparent 35%),
     radial-gradient(circle at 70% 60%, rgba(33, 150, 243, 0.15), transparent 35%);
+  z-index: 1;
+}
+
+.registration-page .page-banner .container {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  width: 100%;
+}
+
+.registration-page .page-banner .particle-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 0;
+}
+
+.registration-page .page-banner h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 10;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.registration-page .page-banner p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+  position: relative;
+  z-index: 10;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Registration Overview Section */
@@ -239,14 +278,14 @@
   margin-top: 3rem;
 }
 
-.tab-selector {
+.registration-page .tab-selector {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
   position: relative;
 }
 
-.tab-button {
+.registration-page .tab-button {
   padding: 1rem 2rem;
   border: 2px solid rgba(0, 0, 0, 0.1);
   background: #f5f5f5;
@@ -261,22 +300,22 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.tab-button:hover {
-  color: white;
-  background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
-  border-color: transparent;
+.registration-page .tab-button:hover {
+  background: linear-gradient(135deg, rgba(0, 230, 118, 0.15), rgba(33, 150, 243, 0.15));
+  border-color: rgba(0, 230, 118, 0.5);
   box-shadow: 0 4px 15px rgba(33, 150, 243, 0.2);
   transform: translateY(-2px);
+  color: var(--black);
 }
 
-.tab-button.active {
+.registration-page .tab-button.active {
   color: white;
   background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
   border-color: transparent;
   box-shadow: 0 4px 15px rgba(33, 150, 243, 0.2);
 }
 
-.tab-button.active::after {
+.registration-page .tab-button.active::after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -288,13 +327,13 @@
 }
 
 /* Add a hover state for active buttons to prevent losing styles */
-.tab-button.active:hover {
+.registration-page .tab-button.active:hover {
   color: white;
   background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
   border-color: transparent;
 }
 
-.tab-button span {
+.registration-page .tab-button span {
   font-size: 0.8rem;
   opacity: 0.7;
   display: block;
@@ -1365,4 +1404,222 @@
 .preview-thumbnail i {
   font-size: 3rem;
   color: #e74c3c;
+}
+
+/* Registration Form Card */
+.google-form-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  margin: 3rem auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.google-form-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.google-form-card-content {
+  padding: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.google-form-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #4285F4, #34A853, #FBBC05, #EA4335);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 2.5rem;
+  box-shadow: 0 10px 20px rgba(66, 133, 244, 0.2);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(66, 133, 244, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(66, 133, 244, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(66, 133, 244, 0);
+  }
+}
+
+.google-form-card h3 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.google-form-card p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.google-form-features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.google-form-features .feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.02);
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.google-form-features .feature:hover {
+  background-color: rgba(66, 133, 244, 0.1);
+  transform: translateY(-3px);
+}
+
+.google-form-features .feature i {
+  color: #34A853;
+  font-size: 1.1rem;
+}
+
+.google-form-features .feature span {
+  font-weight: 500;
+  color: var(--black);
+  font-size: 0.95rem;
+}
+
+.google-form-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.google-form-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #4285F4, #34A853);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(66, 133, 244, 0.3);
+  min-width: 300px;
+}
+
+.google-form-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(66, 133, 244, 0.4);
+  background: linear-gradient(135deg, #4285F4, #0F9D58);
+  color: white;
+}
+
+.google-form-button i {
+  font-size: 1.3rem;
+}
+
+.form-note {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.form-note i {
+  color: #FBBC05;
+}
+
+.google-form-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.decoration-circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-1 {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(66, 133, 244, 0.1), transparent 70%);
+  top: -100px;
+  left: -100px;
+}
+
+.circle-2 {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(52, 168, 83, 0.1), transparent 70%);
+  bottom: -50px;
+  right: -50px;
+}
+
+.circle-3 {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(251, 188, 5, 0.1), transparent 70%);
+  top: 20%;
+  right: 10%;
+}
+
+.decoration-line {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234285F4' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .google-form-card-content {
+    padding: 2rem;
+  }
+  
+  .google-form-features {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .google-form-button {
+    min-width: 0;
+    width: 100%;
+  }
 } 

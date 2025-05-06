@@ -40,39 +40,41 @@ const Footer = () => {
           
           <div className="footer-links-column">
             <h3>Contact Us</h3>
-            <ul className="contact-info">
-              <li><i className="fas fa-envelope"></i> cpeo.feutech.ph@gmail.com</li>
-              <li><i className="fas fa-map-marker-alt"></i> FEU Tech Innovation Center, Sampaloc, Manila</li>
+            <ul className="contact-info-footer">
+              <li><i className="fas fa-envelope" style={{color: 'var(--primary-blue)'}}></i> cpeo.feutech.ph@gmail.com</li>
+              <li><i className="fas fa-map-marker-alt" style={{color: 'var(--primary-blue)'}}></i> FEU Tech Innovation Center, Sampaloc, Manila</li>
             </ul>
           </div>
         </div>
 
-        <div className="footer-social-section">
-          <h3>Follow Us</h3>
-          <div className="social-icons">
-            <a href="https://facebook.com/feutechCpEO" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-              <i className="fab fa-youtube"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <i className="fab fa-linkedin-in"></i>
-            </a>
-          </div>
-        </div>
-
-        <div className="footer-organizers">
-          <h3>Organized By</h3>
-          <div className="organizer-logos">
-            <div className="organizer-logo">
-              <img src={cpeoLogo} alt="Computer Engineering Organization Logo" />
+        <div className="footer-bottom-sections">
+          <div className="footer-social-section">
+            <h3>Follow Us</h3>
+            <div className="social-icons">
+              <a href="https://facebook.com/feutechCpEO" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i className="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <i className="fab fa-youtube"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
             </div>
-            <div className="organizer-logo">
-              <img src={fticLogo} alt="FEU Tech Innovation Center Logo" />
+          </div>
+
+          <div className="footer-organizers">
+            <h3>Organized By</h3>
+            <div className="organizer-logos">
+              <div className="footer-organizer-logo">
+                <img src={cpeoLogo} alt="Computer Engineering Organization Logo" />
+              </div>
+              <div className="footer-organizer-logo">
+                <img src={fticLogo} alt="FEU Tech Innovation Center Logo" />
+              </div>
             </div>
           </div>
         </div>

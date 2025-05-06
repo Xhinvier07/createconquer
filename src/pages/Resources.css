@@ -1,0 +1,420 @@
+/* Resources Page Styles */
+.resources-page {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Banner styling */
+.resources-page .page-banner {
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  position: relative;
+  overflow: hidden;
+  padding: 8rem 0 3rem;
+  margin-top: 0;
+  min-height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resources-page .page-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 30% 40%, rgba(255, 235, 59, 0.15), transparent 35%),
+    radial-gradient(circle at 70% 60%, rgba(33, 150, 243, 0.15), transparent 35%);
+  z-index: 1;
+}
+
+.resources-page .page-banner .container {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  width: 100%;
+}
+
+.resources-page .page-banner .particle-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.resources-page .page-banner h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 10;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.resources-page .page-banner p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+  position: relative;
+  z-index: 10;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Section Styles */
+.resources-page .section {
+  padding: 5rem 0;
+  position: relative;
+}
+
+/* FAQ Section */
+.resources-page .faq-section {
+  position: relative;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.resources-page .faq-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffeb3b' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.resources-page .faq-tabs {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.resources-page .tabs-navigation {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.resources-page .tab-button {
+  padding: 1.2rem 2rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0;
+}
+
+.resources-page .tab-button i {
+  font-size: 1.1rem;
+}
+
+.resources-page .tab-button.active {
+  color: #ffffff;
+  background: linear-gradient(90deg, var(--primary-green), #00c853);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for first tab button with info icon */
+.resources-page .tab-button:first-child.active {
+  background: linear-gradient(90deg, #00e5ff, var(--primary-blue));
+}
+
+/* Style for second tab button with upload icon */
+.resources-page .tab-button:nth-child(2).active {
+  background: linear-gradient(90deg, #651fff, #7c4dff);
+}
+
+.resources-page .tab-button:hover:not(.active) {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.resources-page .tabs-content {
+  padding: 2rem;
+}
+
+.resources-page .tab-pane {
+  display: none;
+}
+
+.resources-page .tab-pane.active {
+  display: block;
+}
+
+.resources-page .faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.resources-page .faq-item {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  border-left: 3px solid var(--yellow);
+  transition: all 0.3s ease;
+}
+
+.resources-page .faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.resources-page .faq-item h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.resources-page .faq-item h3 i {
+  color: var(--primary-blue);
+  font-size: 1.2rem;
+}
+
+.resources-page .faq-item p {
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.6;
+}
+
+/* Discord Section */
+.resources-page .discord-section {
+  background: linear-gradient(135deg, #7289da, #5865f2);
+  color: white;
+  overflow: hidden;
+}
+
+.resources-page .discord-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1), transparent 30%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), transparent 30%);
+  z-index: 0;
+}
+
+.resources-page .discord-content {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 3rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.resources-page .discord-details p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.resources-page .discord-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.resources-page .discord-features li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.resources-page .discord-features li i {
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.resources-page .discord-join {
+  margin-top: 2rem;
+}
+
+.resources-page .discord-join .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  color: #5865f2;
+}
+
+.resources-page .discord-join .btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.resources-page .discord-image {
+  display: flex;
+  justify-content: center;
+}
+
+.resources-page .discord-illustration {
+  width: 180px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  color: white;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Guides Section */
+.resources-page .guides-section {
+  background-color: var(--light-gray);
+  position: relative;
+  overflow: hidden;
+}
+
+.resources-page .guides-section::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 235, 59, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.resources-page .resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.resources-page .resource-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.resources-page .resource-link:hover {
+  color: var(--primary-green);
+  text-decoration: underline;
+}
+
+/* CTA Section */
+.resources-page .cta-section {
+  background: linear-gradient(45deg, var(--primary-blue), var(--primary-green));
+  text-align: center;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.resources-page .cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.2) 0%, transparent 20%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.15) 0%, transparent 20%);
+  z-index: 0;
+}
+
+.resources-page .cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.resources-page .cta-content h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.resources-page .cta-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.resources-page .cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.resources-page .btn-white {
+  background: white;
+  color: var(--primary-blue);
+}
+
+.resources-page .btn-white:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .resources-page .discord-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .resources-page .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .resources-page .tabs-navigation {
+    flex-direction: column;
+  }
+  
+  .resources-page .tab-button {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .resources-page .cta-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+} 
