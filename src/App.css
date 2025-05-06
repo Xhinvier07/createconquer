@@ -392,6 +392,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Page Banner for pages without hero */
+/* This is a base style. Individual pages override these styles with their own specific styling */
 .page-banner {
   background: var(--primary-blue);
   color: var(--white);
@@ -400,6 +401,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   overflow: hidden;
   margin-top: 0;
+  min-height: 25vh;
 }
 
 .page-banner h1 {
