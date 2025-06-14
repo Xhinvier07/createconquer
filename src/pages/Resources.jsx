@@ -378,7 +378,7 @@ const Resources = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.6 }}
                 >
-                  <a href="#" className="btn" target="_blank" rel="noopener noreferrer">
+                  <a href="https://discord.gg/sY8KtCDNpj" className="btn" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-discord"></i> Join Discord Server
                   </a>
                 </motion.div>
@@ -434,7 +434,7 @@ const Resources = () => {
                   delay={0.1}
                 >
                   <p>A comprehensive guide with everything you need to know before participating in Create & Conquer 2025.</p>
-                  <a href="#" className="resource-link">Download PDF</a>
+                  <a href="https://bit.ly/createconquerprimer" className="resource-link">Open Participant Primer</a>
                 </Card>
               </motion.div>
               
@@ -445,7 +445,7 @@ const Resources = () => {
                   delay={0.2}
                 >
                   <p>An example of what a complete project brief looks like, to help you structure your submission properly.</p>
-                  <a href="#" className="resource-link">Download PDF</a>
+                  <a href="#" className="resource-link">To Be Added</a>
                 </Card>
               </motion.div>
               
@@ -456,7 +456,7 @@ const Resources = () => {
                   delay={0.3}
                 >
                   <p>Watch examples of successful project demos from past hackathons to inspire your presentation.</p>
-                  <a href="#" className="resource-link">View Demo</a>
+                  <a href="#" className="resource-link">To Be Added</a>
                 </Card>
               </motion.div>
             </motion.div>
