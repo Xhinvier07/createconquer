@@ -183,7 +183,9 @@ const Home = () => {
         </div>
       </section>
 
+      
       {/* Sponsors Section */}
+      {/*
       <section className="section sponsors-section">
         <div className="container">
           <h2 className="section-title">Our Sponsors</h2>
@@ -194,7 +196,7 @@ const Home = () => {
           </div>
 
           <div className="sponsors-grid">
-            {/* PRESENTED BY */}
+           
             <div className="sponsor-logo img">
 
               <a href="https://www.ikigaianimationstudio.com/" target="_blank" rel="noopener noreferrer">
@@ -215,8 +217,9 @@ const Home = () => {
               <h3>iCOREPay</h3>
             </div>
           </div>
+          
 
-          {/* CO-PRESENTED BY */}
+          
 
           <div className="countdown-cta">
             <p className="btn btn-primary">Co-presented By</p>
@@ -232,7 +235,7 @@ const Home = () => {
           </div>
 
 
-          {/* SUPPORTED BY */}
+          
 
           <div className="countdown-cta">
             <p className="btn btn-primary">Supported By</p>
@@ -254,6 +257,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      */}
     </div>
   );
 };
