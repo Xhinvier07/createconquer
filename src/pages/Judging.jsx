@@ -499,10 +499,10 @@ const Judging = () => {
                   >
                     <div className="prize-medal">1st</div>
                     <h4>Champion</h4>
-                    <div className="prize-amount">₱4,500</div>
+                    <div className="prize-amount">₱7,000</div>
                     <ul className="prize-perks">
                       <li>Cash prize</li>
-                      <li>Winner's trophy</li>
+                      <li>In-Kind Goods</li>
                       <li>Certificates</li>
                       <li>Recognition on CPEO and FEU Tech Innovation Center platforms</li>
                     </ul>
@@ -515,10 +515,10 @@ const Judging = () => {
                   >
                     <div className="prize-medal">2nd</div>
                     <h4>1st Place</h4>
-                    <div className="prize-amount">₱3,000</div>
+                    <div className="prize-amount">₱5,000</div>
                     <ul className="prize-perks">
                       <li>Cash prize</li>
-                      <li>Trophy</li>
+                      <li>In-Kind Goods</li>
                       <li>Certificates</li>
                       <li>Recognition on CPEO and FEU Tech Innovation Center platforms</li>
                     </ul>
@@ -531,10 +531,10 @@ const Judging = () => {
                   >
                     <div className="prize-medal">3rd</div>
                     <h4>2nd Place</h4>
-                    <div className="prize-amount">₱2,000</div>
+                    <div className="prize-amount">₱3,000</div>
                     <ul className="prize-perks">
                       <li>Cash prize</li>
-                      <li>Trophy</li>
+                      <li>In-Kind Goods</li>
                       <li>Certificates</li>
                       <li>Recognition on CPEO and FEU Tech Innovation Center platforms</li>
                     </ul>
@@ -544,7 +544,7 @@ const Judging = () => {
                 <h3 className="prizes-category-title">Special Awards</h3>
                 <div className="special-prizes-grid grid grid-3">
                   <Card
-                    title="Sponsor Award 1"
+                    title="Sponsor Awards"
                     cardType="prize"
                     className="special-prize"
                     delay={0.1}
@@ -552,16 +552,7 @@ const Judging = () => {
                     <div className="prize-amount">TBA</div>
                     <p>Special prize sponsored by our partners (to be announced).</p>
                   </Card>
-                  
-                  <Card
-                    title="Sponsor Award 2"
-                    cardType="prize"
-                    className="special-prize"
-                    delay={0.2}
-                  >
-                    <div className="prize-amount">TBA</div>
-                    <p>Special prize sponsored by our partners (to be announced).</p>
-                  </Card>
+              
                   
                   <Card
                     title="Best Presenter"
@@ -579,7 +570,7 @@ const Judging = () => {
                     className="special-prize"
                     delay={0.4}
                   >
-                    <div className="prize-amount">Certificate</div>
+                    <div className="prize-amount">₱2,000</div>
                     <p>Awarded to the most functional and well-executed project implementation.</p>
                   </Card>
                   

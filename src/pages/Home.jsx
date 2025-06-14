@@ -29,7 +29,15 @@ const Home = () => {
             <div className="hero-content">
               <h1 className="hero-title">Create & Conquer 2025</h1>
               <p className="hero-tagline">Bringing together students, visionary thinkers, and developers from across Metro Manila and the Philippines</p>
-              <p className="hero-dates"><i className="fas fa-calendar-alt"></i> June 27 - July 5, 2025 |<br></br> <i className="fas fa-map-marker-alt"></i> FEU Tech Innovation Center, Manila</p>
+              <p className="hero-dates">
+                <i className="fas fa-calendar-alt"></i>
+                June 27 - July 5, 2025 
+                <br></br>
+                <i className="fas fa-map-marker-alt"></i>
+              For Metro Manila Participants: FEU Tech Innovation Center, Manila
+              <br></br>
+              <i className="fas fa-map-marker-alt"></i>
+              For Remote Participants: Online</p>
               <div className="hero-cta">
                 <Link to="/registration" className="btn btn-primary">Register Now</Link>
                 <Link to="/about" className="btn btn-secondary">Learn More</Link>

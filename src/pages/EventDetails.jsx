@@ -91,9 +91,9 @@ const EventDetails = () => {
   // Timeline events data
   const timelineEvents = [
     {
-      date: 'June 9, 2025',
+      date: 'June 14, 2025',
       title: 'Registration Opens',
-      description: 'Early bird registration begins at 9AM',
+      description: 'Website and Posting Launch',
       mode: 'Online',
       isImportant: true
     },
@@ -544,7 +544,7 @@ const EventDetails = () => {
                 <div className="venue-icon">
                   <i className="fas fa-building"></i>
                 </div>
-                <h3>For In-Person Attendees</h3>
+                <h3>For Metro Manila Attendees</h3>
                 <div className="venue-details">
                   <div className="venue-item">
                     <i className="fas fa-map-marker-alt"></i>
@@ -621,7 +621,7 @@ const EventDetails = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <div className="about-countdown-label">Registration opens:</div>
-                <div className="about-countdown-date">June 9, 2025</div>
+                <div className="about-countdown-date">June 14, 2025</div>
               </motion.div>
               
               <motion.div 
