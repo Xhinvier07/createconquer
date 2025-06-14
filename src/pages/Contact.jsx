@@ -302,14 +302,8 @@ const Contact = () => {
                       <a href="https://facebook.com/feutechCpEO" target="_blank" rel="noopener noreferrer" className="social-icon facebook">
                         <i className="fab fa-facebook-f"></i>
                       </a>
-                      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon instagram">
+                      <a href="https://www.instagram.com/CpEOfeutech" target="_blank" rel="noopener noreferrer" className="social-icon instagram">
                         <i className="fab fa-instagram"></i>
-                      </a>
-                      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="social-icon youtube">
-                        <i className="fab fa-youtube"></i>
-                      </a>
-                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon linkedin">
-                        <i className="fab fa-linkedin-in"></i>
                       </a>
                     </div>
                   </motion.div>
@@ -353,106 +347,6 @@ const Contact = () => {
           </div>
         </AnimatedSection>
 
-        {/* FAQ Section */}
-        <AnimatedSection className="section faq-section" id="faq">
-          <div className="container">
-            <motion.h2 
-              className="section-title"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              Frequently Asked Questions
-            </motion.h2>
-            <motion.p 
-              className="section-subtitle"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-            >
-              Find quick answers to common questions about the hackathon.
-            </motion.p>
-            
-            <motion.div 
-              className="faq-grid"
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              <motion.div variants={itemVariants}>
-                <div 
-                  className={`card faq ${activeFaqId === 1 ? 'active' : ''}`} 
-                  onClick={() => toggleFaq(1)}
-                >
-                  <div className="card-header">
-                    <h3>How can I register for the hackathon?</h3>
-                  </div>
-                  <div className="card-content">
-                    <p>
-                      You can register by visiting the Registration page on our website. Follow the steps 
-                      to complete your registration for your team.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-              
-              <motion.div variants={itemVariants}>
-                <div 
-                  className={`card faq ${activeFaqId === 2 ? 'active' : ''}`} 
-                  onClick={() => toggleFaq(2)}
-                >
-                  <div className="card-header">
-                    <h3>What are the registration fees?</h3>
-                  </div>
-                  <div className="card-content">
-                    <p>
-                      Early Bird (June 9-14, 2025): CPEO members and JHS/SHS students - ₱150 per member, 
-                      Undergraduates - ₱200 per member. Regular Registration: CPEO members and JHS/SHS students - ₱200 per member, 
-                      Undergraduates - ₱250 per member.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-              
-              <motion.div variants={itemVariants}>
-                <div 
-                  className={`card faq ${activeFaqId === 3 ? 'active' : ''}`} 
-                  onClick={() => toggleFaq(3)}
-                >
-                  <div className="card-header">
-                    <h3>Do I need to have a team to register?</h3>
-                  </div>
-                  <div className="card-content">
-                    <p>
-                      Yes, teams must consist of 4-6 members. One member must be designated as the team leader
-                      who will register on behalf of their team.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-              
-              <motion.div variants={itemVariants}>
-                <div 
-                  className={`card faq ${activeFaqId === 4 ? 'active' : ''}`} 
-                  onClick={() => toggleFaq(4)}
-                >
-                  <div className="card-header">
-                    <h3>What if I don't have any coding experience?</h3>
-                  </div>
-                  <div className="card-content">
-                    <p>
-                      No coding experience is necessary! Create & Conquer 2025 is designed to be inclusive for 
-                      participants of all skill levels, and teams can choose to use no-code tools.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
-        </AnimatedSection>
       </div>
     </div>
   );
