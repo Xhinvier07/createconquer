@@ -10,7 +10,6 @@ const Registration = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formProgress, setFormProgress] = useState(0);
   const [isRegistrationOpen, setIsRegistrationOpen] = useState(true);
-  const [activeTab, setActiveTab] = useState('early');
   const totalSteps = 4;
 
   useEffect(() => {
@@ -153,7 +152,7 @@ const Registration = () => {
                   <i className="fas fa-calendar-alt"></i>
                 </div>
                 <h3>Key Dates</h3>
-                <p>Registration: <br></br>June 9 - 23, 2025</p>
+                <p>Registration: <br></br>June 14 - 23, 2025</p>
                 <p>Event: <br></br>June 27 - July 5, 2025</p>
               </div>
               
@@ -183,102 +182,73 @@ const Registration = () => {
               Registration Fees
             </motion.h2>
             
-            <div className="fee-tabs">
-              <div className="tab-selector">
-                <button 
-                  className={`tab-button ${activeTab === 'early' ? 'active' : ''}`} 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setActiveTab('early');
-                  }}
-                >
-                  Early Bird <span>(June 9-14)</span>
-                </button>
-                <button 
-                  className={`tab-button ${activeTab === 'regular' ? 'active' : ''}`} 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setActiveTab('regular');
-                  }}
-                >
-                  Regular <span>(June 15-23)</span>
-                </button>
-              </div>
-              
-              <div className="fee-cards-container">
-                <div className="fee-cards">
-                  <div className="fee-card cpeo">
-                    <div className="fee-icon">
-                      <i className="fas fa-user-tie"></i>
+            <div className="fee-cards-container">
+              <div className="fee-cards">
+                <div className="fee-card cpeo">
+                  <div className="fee-icon">
+                    <i className="fas fa-user-tie"></i>
+                  </div>
+                  <h3>CPEO Members</h3>
+                  <div className="fee-amount">₱200</div>
+                  <p>per member</p>
+                  <div className="fee-features">
+                    <div className="fee-feature">
+                      <i className="fas fa-check"></i>
+                      <span>Full event access</span>
                     </div>
-                    <h3>CPEO Members</h3>
-                    <div className="fee-amount">
-                      {activeTab === 'early' ? '₱150' : '₱200'}
+                    <div className="fee-feature">
+                      <i className="fas fa-check"></i>
+                      <span>Certificate</span>
                     </div>
-                    <p>per member</p>
-                    <div className="fee-features">
-                      <div className="fee-feature">
-                        <i className="fas fa-check"></i>
-                        <span>Full event access</span>
-                      </div>
-                      <div className="fee-feature">
-                        <i className="fas fa-check"></i>
-                        <span>Certificate</span>
-                      </div>
-                      <div className="fee-feature">
-                        <i className="fas fa-check"></i>
-                        <span>Mentorship</span>
-                      </div>
+                    <div className="fee-feature">
+                      <i className="fas fa-check"></i>
+                      <span>Mentorship</span>
                     </div>
                   </div>
-                  
-                  <div className="fee-card jhs-shs">
-                    <div className="fee-icon">
-                      <i className="fas fa-school"></i>
+                </div>
+                
+                <div className="fee-card jhs-shs">
+                  <div className="fee-icon">
+                    <i className="fas fa-school"></i>
+                  </div>
+                  <h3>JHS & SHS Students</h3>
+                  <div className="fee-amount">₱200</div>
+                  <p>per member</p>
+                  <div className="fee-features">
+                    <div className="fee-feature">
+                      <i className="fas fa-check"></i>
+                      <span>Full event access</span>
                     </div>
-                    <h3>JHS & SHS Students</h3>
-                    <div className="fee-amount">
-                      {activeTab === 'early' ? '₱150' : '₱200'}
+                    <div className="fee-feature">
+                      <i className="fas fa-check"></i>
+                      <span>Certificate</span>
                     </div>
-                    <p>per member</p>
-                    <div className="fee-features">
-                      <div className="fee-feature">
-                        <i className="fas fa-check"></i>
-                        <span>Full event access</span>
-                      </div>
-                      <div className="fee-feature">
-                        <i className="fas fa-check"></i>
-                        <span>Certificate</span>
-                      </div>
-                      <div className="fee-feature">
-                        <i className="fas fa-check"></i>
-                        <span>Mentorship</span>
-                      </div>
+                    <div className="fee-feature">
+                      <i className="fas fa-check"></i>
+                      <span>Mentorship</span>
                     </div>
                   </div>
-                  
-                  <div className="fee-card undergrad">
-                    <div className="fee-icon">
-                      <i className="fas fa-university"></i>
+                </div>
+                
+                <div className="fee-card undergrad">
+                  <div className="fee-icon">
+                    <i className="fas fa-university"></i>
+                  </div>
+                  <h3>Undergraduate Students</h3>
+                  <div className="fee-amount">₱250</div>
+                  <p>per member</p>
+                  <div className="fee-features">
+                    <div className="fee-feature">
+                      <i className="fas fa-check"></i>
+                      <span>Full event access</span>
                     </div>
-                    <h3>Undergraduate Students</h3>
-                    <div className="fee-amount">
-                      {activeTab === 'early' ? '₱200' : '₱250'}
+                    <div className="fee-feature">
+                      <i className="fas fa-check"></i>
+                      <span>Certificate</span>
                     </div>
-                    <p>per member</p>
-                    <div className="fee-features">
-                      <div className="fee-feature">
-                        <i className="fas fa-check"></i>
-                        <span>Full event access</span>
-                      </div>
-                      <div className="fee-feature">
-                        <i className="fas fa-check"></i>
-                        <span>Certificate</span>
-                      </div>
-                      <div className="fee-feature">
-                        <i className="fas fa-check"></i>
-                        <span>Mentorship</span>
-                      </div>
+                    <div className="fee-feature">
+                      <i className="fas fa-check"></i>
+                      <span>Mentorship</span>
                     </div>
                   </div>
                 </div>
@@ -287,7 +257,7 @@ const Registration = () => {
             
             <div className="fee-notice">
               <i className="fas fa-info-circle"></i>
-              <p>Registration fees must be paid in full for all team members to confirm participation.</p>
+              <p>A portion of the registration fees will be donated to a cause. Updates on the beneficiary will be announced.</p>
             </div>
           </div>
         </AnimatedSection>
@@ -310,23 +280,15 @@ const Registration = () => {
                   <i className="fab fa-google"></i>
                 </div>
                 <h3>Register via Google Forms</h3>
-                <p>We've streamlined our registration process! Please use the Google Form to register your team for the Create & Conquer 2025 Hackathon.</p>
+                <p>Please use the Google Form to register your team for the Create & Conquer 2025 Hackathon.</p>
                 <div className="google-form-features">
                   <div className="feature">
                     <i className="fas fa-check-circle"></i>
-                    <span>Quick & secure registration</span>
-                  </div>
-                  <div className="feature">
-                    <i className="fas fa-check-circle"></i>
-                    <span>Easily fill out on any device</span>
-                  </div>
-                  <div className="feature">
-                    <i className="fas fa-check-circle"></i>
-                    <span>Instant submission confirmation</span>
+                    <span>Email confirmation will be sent a few days after registration.</span>
                   </div>
                 </div>
                 <div className="google-form-action">
-                  <a href="https://forms.google.com/createandconquerform" target="_blank" rel="noopener noreferrer" className="google-form-button">
+                  <a href="https://bit.ly/createconquerregis" target="_blank" rel="noopener noreferrer" className="google-form-button">
                     <i className="fab fa-google"></i> Register Now
                   </a>
                   <div className="form-note">
@@ -511,7 +473,7 @@ const Registration = () => {
                     Yes, you can update your team information until June 23, 2025. 
                     Please contact us at cpeo.feutech.ph@gmail.com for any changes.
                   </p>
-                </div>
+                  </div>
               </div>
             </div>
           </div>
@@ -521,4 +483,4 @@ const Registration = () => {
   );
 };
 
-export default Registration; 
+export default Registration;

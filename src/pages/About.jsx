@@ -247,9 +247,8 @@ const About = () => {
                     <div className="value-icon"><i className="fas fa-lightbulb"></i><span>Innovation</span></div>
                   </div>
                   <div className="organizer-socials">
-                    <a href="#" aria-label="Facebook"><i className="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/feutechCpEO" target="_blank" aria-label="Facebook"><i className="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/CpEOfeutech" target="_blank" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
                   </div>
                   <div className="hover-text">Hover to learn more</div>
                 </div>
@@ -288,9 +287,8 @@ const About = () => {
                     <div className="value-icon"><i className="fas fa-rocket"></i><span>Entrepreneurship</span></div>
                   </div>
                   <div className="organizer-socials">
-                    <a href="#" aria-label="Facebook"><i className="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i className="fab fa-linkedin"></i></a>
+                    <a href="https://facebook.com/feutechinnovationcenter" target="_blank" aria-label="Facebook"><i className="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/feu-tech-innovation-center" target="_blank" aria-label="LinkedIn"><i className="fab fa-linkedin"></i></a>
                   </div>
                   <div className="hover-text">Hover to learn more</div>
                 </div>
@@ -386,7 +384,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <div className="about-countdown-label">Registration opens:</div>
-                <div className="about-countdown-date">June 9, 2025</div>
+                <div className="about-countdown-date">June 14, 2025</div>
               </motion.div>
               
               <motion.div 
