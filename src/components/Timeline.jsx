@@ -4,9 +4,9 @@ import './Timeline.css';
 const Timeline = () => {
   const timelineEvents = [
     {
-      date: 'June 9, 2025',
+      date: 'June 14, 2025',
       title: 'Registration Opens',
-      description: 'Registration begins at 9AM.'
+      description: 'Registration on this day.'
     },
     {
       date: 'June 23, 2025',

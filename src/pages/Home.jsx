@@ -5,6 +5,12 @@ import './Home.css';
 import heroImage from '../assets/hero.png';
 import cpeoLogo from '../assets/cpeo.png';
 import fticLogo from '../assets/ftic.png';
+import ikigaiLogo from '../assets/Ikigai Animation Studio.png';
+import icorepayLogo from '../assets/iCOREPay.png';
+import zenithpadsLogo from '../assets/ZenithPads.png';
+import geospectrumLogo from '../assets/Geospectrum.png';
+import feltaLogo from '../assets/Felta Multi-Media.jpg';
+
 
 const Home = () => {
   // Registration deadline date
@@ -66,7 +72,7 @@ const Home = () => {
           <div className="highlights-grid">
             <div className="highlight-card">
               <div className="highlight-icon"><i className="fas fa-trophy"></i></div>
-              <h3>₱9,500 Prize Pool</h3>
+              <h3>₱15,000+ Prize Pool</h3>
               <p>Compete for exciting cash prizes and special awards</p>
             </div>
             <div className="highlight-card">
@@ -77,7 +83,7 @@ const Home = () => {
             <div className="highlight-card">
               <div className="highlight-icon"><i className="fas fa-clipboard-list"></i></div>
               <h3>Registration</h3>
-              <p>June 9 - June 23, 2025</p>
+              <p>June 14 - June 23, 2025</p>
             </div>
           </div>
         </div>
@@ -131,7 +137,7 @@ const Home = () => {
           <div className="important-dates">
             <div className="date-item">
               <h3>Registration</h3>
-              <p><i className="fas fa-calendar-day"></i> June 9 - June 23, 2025</p>
+              <p><i className="fas fa-calendar-day"></i> June 14 - June 23, 2025</p>
             </div>
             <div className="date-item">
               <h3>Orientation & Kickoff</h3>
@@ -174,15 +180,69 @@ const Home = () => {
         <div className="container">
           <h2 className="section-title">Our Sponsors</h2>
           <p className="sponsors-subtitle">Supported by industry leaders</p>
-          <div className="sponsors-grid">
-            {/* Placeholder for sponsor logos */}
-            <div className="sponsor-logo placeholder"></div>
-            <div className="sponsor-logo placeholder"></div>
-            <div className="sponsor-logo placeholder"></div>
-            <div className="sponsor-logo placeholder"></div>
+
+          <div className="countdown-cta">
+            <p className="btn btn-primary">Presented By</p>
           </div>
-          <div className="sponsors-cta">
-            <Link to="/sponsors" className="btn btn-secondary">View All Sponsors</Link>
+
+          <div className="sponsors-grid">
+            {/* PRESENTED BY */}
+            <div className="sponsor-logo img">
+
+              <a href="https://www.ikigaianimationstudio.com/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src={ikigaiLogo}
+                  alt="Ikigai Animation Studio logo"
+                />
+              </a>
+              <h3>Ikigai Animation Studio</h3>
+            </div>
+            <div className="sponsor-logo img">
+              <a href="https://icorepay.tech" target="_blank" rel="noopener noreferrer">
+                <img
+                  src={icorepayLogo}
+                  alt="iCOREPay logo"
+                />
+              </a>
+              <h3>iCOREPay</h3>
+            </div>
+          </div>
+
+          {/* CO-PRESENTED BY */}
+
+          <div className="countdown-cta">
+            <p className="btn btn-primary">Co-presented By</p>
+          </div>
+
+          <div className="sponsors-grid">
+            <div className="sponsor-logo img">
+             <a href="https://zenithpads.com/" target="_blank" rel="noopener noreferrer">
+                 <img src={zenithpadsLogo} alt="Zenith Pads logo" />
+              </a>
+              <h3>ZenithPads</h3>
+            </div>
+          </div>
+
+
+          {/* SUPPORTED BY */}
+
+          <div className="countdown-cta">
+            <p className="btn btn-primary">Supported By</p>
+          </div>
+
+          <div className="sponsors-grid">
+            <div className="sponsor-logo img">
+              <a href="https://www.geospectrum.com.ph//" target="_blank" rel="noopener noreferrer">
+              <img src={geospectrumLogo} alt="Geospectrum logo" width="200" height="160" />
+              </a>
+              <h3>Geospectrum</h3>
+            </div>
+            <div className="sponsor-logo img">
+              <a href="https://www.felta.ph/" target="_blank" rel="noopener noreferrer">
+                <img src={feltaLogo} alt="Felta Multi-Media logo" width="200" height="160" />
+              </a>
+              <h3>Felta Multi-Media</h3>
+            </div>
           </div>
         </div>
       </section>
