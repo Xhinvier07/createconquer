@@ -20,6 +20,22 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Add effect to handle body scroll lock when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      // Prevent scrolling on body when menu is open
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Re-enable scrolling when menu is closed
+      document.body.style.overflow = 'auto';
+    }
+
+    // Cleanup function to ensure scrolling is re-enabled when component unmounts
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isMenuOpen]);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -38,8 +54,11 @@ const Navbar = () => {
     { name: 'Contact', path: '/contact' }
   ];
 
+  // Always add the 'mobile-nav' class for mobile devices to ensure consistent styling
+  const navbarClass = `navbar ${isScrolled ? 'scrolled' : ''} ${isMenuOpen ? 'mobile-nav' : ''}`;
+
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={navbarClass}>
       <div className="container navbar-container">
         <div className="navbar-brand">
           <Link to="/" onClick={closeMenu}>

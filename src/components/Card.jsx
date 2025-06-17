@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Card = ({ 
@@ -12,6 +12,24 @@ const Card = ({
   cardType = 'default' // default, feature, criterion, faq, prize
 }) => {
   const cardRef = useRef(null);
+  // Add state to track if we're on mobile
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // Check if we're on mobile when the component mounts
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    // Initial check
+    checkIfMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Clean up
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
   
   const getCardClasses = () => {
     const baseClass = 'card';
@@ -27,6 +45,30 @@ const Card = ({
     return `${baseClass} ${typeClass} ${className}`;
   };
   
+  // If on mobile, don't animate
+  if (isMobile) {
+    return (
+      <div ref={cardRef} className={getCardClasses()}>
+        {(icon || iconSrc) && (
+          <div className={`card-icon ${iconClass}`}>
+            {iconSrc ? (
+              <img src={iconSrc} alt={title || 'Card icon'} />
+            ) : (
+              <span className="icon">{icon}</span>
+            )}
+          </div>
+        )}
+        
+        {title && <h3 className="card-title">{title}</h3>}
+        
+        <div className="card-content">
+          {children}
+        </div>
+      </div>
+    );
+  }
+  
+  // For desktop, use animations
   return (
     <motion.div
       ref={cardRef}

@@ -401,20 +401,91 @@
   .resources-page .faq-grid {
     grid-template-columns: 1fr;
   }
+
+  .resources-page .discord-image {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
+  .resources-page .page-banner {
+    padding: 7rem 0 2rem;
+    min-height: auto;
+  }
+
+  .resources-page .page-banner h1 {
+    font-size: 2.2rem;
+    padding: 0 1rem;
+    margin-top: 1rem;
+  }
+
+  .resources-page .page-banner p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .resources-page .section {
+    padding: 3rem 0;
+  }
+
   .resources-page .tabs-navigation {
     flex-direction: column;
   }
   
   .resources-page .tab-button {
     width: 100%;
-    justify-content: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+  
+  .resources-page .tabs-content {
+    padding: 1.5rem 1rem;
+  }
+  
+  .resources-page .faq-item {
+    padding: 1.2rem;
   }
   
   .resources-page .cta-buttons {
     flex-direction: column;
     gap: 1rem;
+  }
+  
+  .resources-page .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .resources-page .page-banner {
+    padding: 6rem 0 2rem;
+  }
+
+  .resources-page .page-banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .resources-page .page-banner p {
+    font-size: 0.9rem;
+  }
+
+  .resources-page .section-title {
+    font-size: 1.8rem;
+  }
+
+  .resources-page .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .resources-page .faq-item h3 {
+    font-size: 1rem;
+  }
+
+  .resources-page .faq-item p {
+    font-size: 0.9rem;
+  }
+
+  .resources-page .discord-features li {
+    font-size: 0.95rem;
   }
 } 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const Section = ({ 
@@ -13,6 +13,24 @@ const Section = ({
   titleCenter = false,
   titleAnimation = true
 }) => {
+  // Add state to track if we're on mobile
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // Check if we're on mobile when the component mounts
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    // Initial check
+    checkIfMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Clean up
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
   
   const getSectionClass = () => {
     const baseClass = 'section';
@@ -49,40 +67,51 @@ const Section = ({
     }
   };
   
+  // Disable animations on mobile
+  const renderTitle = () => {
+    if (!title) return null;
+    
+    if (isMobile || !titleAnimation) {
+      return <h2 className={getTitleClass()}>{title}</h2>;
+    }
+    
+    return (
+      <motion.h2 
+        className={getTitleClass()}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        variants={titleVariants}
+      >
+        {title}
+      </motion.h2>
+    );
+  };
+  
+  const renderSubtitle = () => {
+    if (!subtitle) return null;
+    
+    if (isMobile || !titleAnimation) {
+      return <p className="section-subtitle">{subtitle}</p>;
+    }
+    
+    return (
+      <motion.p 
+        className="section-subtitle"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        variants={subtitleVariants}
+      >
+        {subtitle}
+      </motion.p>
+    );
+  };
+  
   const content = (
     <>
-      {title && (
-        titleAnimation ? (
-          <motion.h2 
-            className={getTitleClass()}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
-            variants={titleVariants}
-          >
-            {title}
-          </motion.h2>
-        ) : (
-          <h2 className={getTitleClass()}>{title}</h2>
-        )
-      )}
-      
-      {subtitle && (
-        titleAnimation ? (
-          <motion.p 
-            className="section-subtitle"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
-            variants={subtitleVariants}
-          >
-            {subtitle}
-          </motion.p>
-        ) : (
-          <p className="section-subtitle">{subtitle}</p>
-        )
-      )}
-      
+      {renderTitle()}
+      {renderSubtitle()}
       {children}
     </>
   );

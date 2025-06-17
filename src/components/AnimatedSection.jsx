@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 const AnimatedSection = ({ 
   children, 
@@ -7,6 +8,35 @@ const AnimatedSection = ({
   direction = 'up',
   id = ''
 }) => {
+  // Add state to track if we're on mobile
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // Check if we're on mobile when the component mounts
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    // Initial check
+    checkIfMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Clean up
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
+  
+  // If on mobile, don't animate
+  if (isMobile) {
+    return (
+      <section id={id} className={`section ${className}`}>
+        {children}
+      </section>
+    );
+  }
+  
+  // For desktop, use animations
   let initial = { opacity: 0 };
   
   // Add directional animation

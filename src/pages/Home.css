@@ -768,6 +768,8 @@
   }
 
   .hero-banner {
+
+    margin-top: 100px;
     max-width: 70%;
   }
 
@@ -822,6 +824,7 @@
   }
 
   .hero-banner {
+    margin-top: 100px;
     max-width: 80%;
   }
 
@@ -856,6 +859,7 @@
   }
 
   .hero-banner {
+    margin-top: 100px;
     max-width: 90%;
   }
 

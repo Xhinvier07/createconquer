@@ -610,4 +610,88 @@
   .contact-page .faq-grid {
     grid-template-columns: 1fr !important;
   }
+  
+  .contact-page .info-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .contact-page .info-item {
+    width: 100%;
+  }
+  
+  .contact-page .contact-form-container,
+  .contact-page .contact-info {
+    padding: 2rem 1.5rem;
+  }
+  
+  .contact-page .form-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .contact-page .contact-info h3,
+  .contact-page .contact-form-container h3 {
+    font-size: 1.5rem;
+  }
+  
+  .contact-page .contact-info p,
+  .contact-page .contact-form-container p {
+    font-size: 1rem;
+  }
+  
+  .contact-page .info-content h4 {
+    font-size: 1rem;
+  }
+  
+  .contact-page .info-content p,
+  .contact-page .info-content a {
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+  
+  .contact-page .map-container h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page .page-banner h1 {
+    font-size: 1.8rem;
+  }
+  
+  .contact-page .page-banner p {
+    font-size: 0.9rem;
+  }
+  
+  .contact-page .contact-form-container,
+  .contact-page .contact-info {
+    padding: 1.5rem 1rem;
+  }
+  
+  .contact-page .contact-info h3,
+  .contact-page .contact-form-container h3 {
+    font-size: 1.3rem;
+  }
+  
+  .contact-page .social-links-contact .social-icons {
+    gap: 0.5rem;
+  }
+  
+  .contact-page .social-links-contact .social-icon {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 0.3rem;
+  }
+  
+  .contact-page .social-links-contact .social-icon i {
+    font-size: 16px;
+    line-height: 40px;
+  }
+  
+  .contact-page .map-responsive {
+    border-radius: 10px;
+    border: 3px solid white;
+  }
 } 

@@ -205,6 +205,12 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease;
 }
 
+/* Mobile nav specific styling */
+.mobile-nav {
+  background-color: var(--black) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
 .navbar-container {
   display: flex;
   align-items: center;
@@ -353,6 +359,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 992px) {
+  /* Ensure the navbar is always visible with a solid background on mobile */
+  .navbar {
+    background-color: var(--black);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Hide any background transitions/animations for mobile */
+  .navbar.scrolled {
+    background-color: var(--black);
+  }
+  
   .navbar-toggle {
     display: block;
   }
@@ -362,6 +379,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 80px;
     left: 0;
     right: 0;
+    bottom: 0;
     background-color: var(--black);
     flex-direction: column;
     align-items: flex-start;
@@ -369,6 +387,9 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-150%);
     transition: transform 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    height: calc(100vh - 80px);
+    z-index: 1000;
   }
   
   .navbar-menu.open {
@@ -392,11 +413,26 @@ h1, h2, h3, h4, h5, h6 {
   .navbar-links a {
     padding: 0.5rem 0;
     display: block;
+    font-size: 1.2rem;
+    color: white !important; /* Force white text color for mobile */
+  }
+  
+  /* Override any color transitions for mobile */
+  .navbar-links a:hover,
+  .navbar-links li.active a {
+    color: white !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Add a different indicator for active items instead of color */
+  .navbar-links li.active a:after {
+    background-color: white;
+    height: 3px;
   }
   
   .navbar-cta {
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     display: flex;
     justify-content: center;
   }
@@ -449,15 +485,37 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .page-banner {
-    padding: 6rem 0 2rem;
+    padding: 7rem 0 2rem;
+    min-height: auto;
   }
   
   .page-banner h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    padding: 0 1rem;
+    margin-top: 1rem;
+  }
+  
+  .page-banner p {
+    font-size: 1rem;
+    padding: 0 1rem;
   }
   
   .section-title {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-banner {
+    padding: 6rem 0 2rem;
+  }
+  
+  .page-banner h1 {
+    font-size: 1.8rem;
+  }
+  
+  .page-banner p {
+    font-size: 0.9rem;
   }
 }
 
@@ -1538,5 +1596,28 @@ button.btn {
     width: 70px;
     height: 70px;
     padding: 0.8rem;
+  }
+}
+
+/* Disable animations on mobile to fix visibility issues */
+@media (max-width: 768px) {
+  * {
+    /*
+     * This will disable all CSS animations and transitions on mobile devices
+     * to prevent content visibility issues
+     */
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+  
+  /* Exceptions for specific animations that should still work */
+  .navbar-menu {
+    transition: transform 0.3s ease !important;
+  }
+  
+  .toggle-icon span {
+    transition: all 0.3s ease !important;
   }
 }

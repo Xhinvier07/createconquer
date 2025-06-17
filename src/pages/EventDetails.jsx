@@ -51,6 +51,14 @@ const EventDetails = () => {
       });
     }
     
+    // Ensure the first tab is active by default
+    const firstTab = kickoffTabRef.current;
+    if (firstTab) {
+      setTimeout(() => {
+        handleTabClick('kickoff', firstTab);
+      }, 100);
+    }
+    
     // Cleanup event listeners on component unmount
     return () => {
       if (kickoffTabRef.current) {
@@ -176,7 +184,7 @@ const EventDetails = () => {
               className="section-title"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5 }}
             >
               CREATE & CONQUER 2025 JOURNEY
@@ -185,7 +193,7 @@ const EventDetails = () => {
               className="section-subtitle"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               Mark your calendars for these key dates
@@ -198,7 +206,7 @@ const EventDetails = () => {
                   className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <div className={`timeline-content ${event.isImportant ? 'important-event' : ''}`}>
@@ -230,7 +238,7 @@ const EventDetails = () => {
               className="section-title"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5 }}
             >
               Program Flow
@@ -241,13 +249,33 @@ const EventDetails = () => {
                 className="tab-navigation"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-                <button className="tab-button active" data-target="kickoff" ref={kickoffTabRef}>
+                <button 
+                  className="tab-button" 
+                  data-target="kickoff" 
+                  ref={kickoffTabRef}
+                  onClick={() => {
+                    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                    document.querySelectorAll('.program-schedule').forEach(schedule => schedule.classList.remove('active'));
+                    kickoffTabRef.current.classList.add('active');
+                    document.getElementById('kickoff').classList.add('active');
+                  }}
+                >
                   <i className="fas fa-flag-checkered"></i> Orientation & Kickoff
                 </button>
-                <button className="tab-button" data-target="demo" ref={demoTabRef}>
+                <button 
+                  className="tab-button" 
+                  data-target="demo" 
+                  ref={demoTabRef}
+                  onClick={() => {
+                    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                    document.querySelectorAll('.program-schedule').forEach(schedule => schedule.classList.remove('active'));
+                    demoTabRef.current.classList.add('active');
+                    document.getElementById('demo').classList.add('active');
+                  }}
+                >
                   <i className="fas fa-award"></i> Demo Day & Awarding
                 </button>
               </motion.div>
@@ -256,7 +284,7 @@ const EventDetails = () => {
                 className="program-content"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <div id="kickoff" className="program-schedule active">

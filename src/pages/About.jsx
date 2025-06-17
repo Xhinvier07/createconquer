@@ -66,7 +66,7 @@ const About = () => {
                 <motion.h2
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.5 }}
                   className="intro-heading"
                 >
@@ -76,7 +76,7 @@ const About = () => {
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.5, delay: 0.1 }}
                   className="intro-tagline"
                 >
@@ -86,7 +86,7 @@ const About = () => {
                   className="intro-paragraph"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
                   <p className="drop-cap">
@@ -112,7 +112,7 @@ const About = () => {
                 <motion.h3
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
                   What Makes Us Unique
@@ -121,7 +121,7 @@ const About = () => {
                   <motion.li
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.4 }}
                   >
                     <span className="feature-icon"><i className="fas fa-users"></i></span>
@@ -133,7 +133,7 @@ const About = () => {
                   <motion.li
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.4, delay: 0.1 }}
                   >
                     <span className="feature-icon"><i className="fas fa-code"></i></span>
@@ -145,7 +145,7 @@ const About = () => {
                   <motion.li
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.4, delay: 0.2 }}
                   >
                     <span className="feature-icon"><i className="fas fa-globe-asia"></i></span>
@@ -157,7 +157,7 @@ const About = () => {
                   <motion.li
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.4, delay: 0.3 }}
                   >
                     <span className="feature-icon"><i className="fas fa-hands-helping"></i></span>
@@ -173,7 +173,7 @@ const About = () => {
                   className="intro-image-container"
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6 }}
                 >
                   <div className="tech-pattern"></div>

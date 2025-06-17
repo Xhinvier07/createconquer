@@ -70,7 +70,7 @@ const Resources = () => {
               className="section-title"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5 }}
             >
               Frequently Asked Questions
@@ -79,7 +79,7 @@ const Resources = () => {
               className="section-subtitle"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               Find answers to common questions about Create & Conquer 2025.
@@ -312,7 +312,7 @@ const Resources = () => {
               className="section-title"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5 }}
             >
               Join Our Discord Community
@@ -323,7 +323,7 @@ const Resources = () => {
                 className="discord-details"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
               >
                 <p>
@@ -333,7 +333,7 @@ const Resources = () => {
                   <motion.li
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.4, delay: 0.1 }}
                   >
                     <i className="fas fa-users"></i> Finding team members
@@ -341,7 +341,7 @@ const Resources = () => {
                   <motion.li
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.4, delay: 0.2 }}
                   >
                     <i className="fas fa-bell"></i> Getting real-time updates and announcements
@@ -349,7 +349,7 @@ const Resources = () => {
                   <motion.li
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.4, delay: 0.3 }}
                   >
                     <i className="fas fa-question-circle"></i> Asking questions to organizers and mentors
@@ -357,7 +357,7 @@ const Resources = () => {
                   <motion.li
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.4, delay: 0.4 }}
                   >
                     <i className="fas fa-network-wired"></i> Connecting with other participants
@@ -365,7 +365,7 @@ const Resources = () => {
                   <motion.li
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.4, delay: 0.5 }}
                   >
                     <i className="fas fa-file-alt"></i> Accessing exclusive resources and support
@@ -375,7 +375,7 @@ const Resources = () => {
                   className="discord-join"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.5, delay: 0.6 }}
                 >
                   <a href="https://discord.gg/sY8KtCDNpj" className="btn" target="_blank" rel="noopener noreferrer">
@@ -387,7 +387,7 @@ const Resources = () => {
                 className="discord-image"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
               >
                 <div className="discord-illustration">
@@ -405,7 +405,7 @@ const Resources = () => {
               className="section-title"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5 }}
             >
               Participant Guides
@@ -414,7 +414,7 @@ const Resources = () => {
               className="section-subtitle"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               Download these guides to help you prepare for and navigate the hackathon.
@@ -425,7 +425,7 @@ const Resources = () => {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
             >
               <motion.div variants={itemVariants}>
                 <Card
@@ -469,7 +469,7 @@ const Resources = () => {
             className="cta-content"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
             <h2>Ready to participate?</h2>
