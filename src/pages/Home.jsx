@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Analytics } from "@vercel/analytics/next";
 import CountdownTimer from '../components/CountdownTimer';
 import Timeline from '../components/Timeline';
 import './Home.css';
@@ -15,12 +16,15 @@ import tambayanLogo from '../assets/tambayan.png';
 import icpepplmLogo from '../assets/icpep-plm.jpeg';
 
 
+
+
 const Home = () => {
   // Registration deadline date
   const registrationDeadline = "2025-06-23T23:59:59";
 
   return (
     <div className="home-page">
+      <Analytics />
       {/* Hero Section - Left logo, right details */}
       <section className="hero">
         <div className="hero-overlay"></div>
