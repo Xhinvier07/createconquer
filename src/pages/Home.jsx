@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from '@vercel/analytics/react';
 import CountdownTimer from '../components/CountdownTimer';
 import Timeline from '../components/Timeline';
 import './Home.css';
@@ -15,9 +15,6 @@ import jpcsLogo from '../assets/jpc.png';
 import tambayanLogo from '../assets/tambaya.png';
 import icpepplmLogo from '../assets/icpep-pl.jpeg';
 
-
-
-
 const Home = () => {
   // Registration deadline date
   const registrationDeadline = "2025-06-23T23:59:59";
@@ -25,6 +22,7 @@ const Home = () => {
   return (
     <div className="home-page">
       <Analytics />
+      
       {/* Hero Section - Left logo, right details */}
       <section className="hero">
         <div className="hero-overlay"></div>
@@ -179,7 +177,6 @@ const Home = () => {
               <h3>Computer Engineering Organization (CPEO)</h3>
               <p><i className="fas fa-university"></i> FEU Tech</p>
             </div>
-
             <div className="organizer-card">
               <div className="organizer-logo">
                 <img src={fticLogo} alt="FEU Tech Innovation Center Logo" />
@@ -187,7 +184,6 @@ const Home = () => {
               <h3>FEU Innovation Center</h3>
               <p><i className="fas fa-university"></i> FEU Tech</p>
             </div>
-
           </div>
         </div>
       </section>
@@ -269,21 +265,21 @@ const Home = () => {
           <div className="sponsors-grid">
 
             <div className="sponsor-logo img">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://icpep-plm.com/" target="_blank" rel="noopener noreferrer">
                 <img src={icpepplmLogo} alt="ICPEP-PLM logo" width="200" height="160" />
               </a>
               <h3>ICpEP-PLM</h3>
             </div>
 
             <div className="sponsor-logo img">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.jpcs.com.ph/" target="_blank" rel="noopener noreferrer">
                 <img src={jpcsLogo} alt="JPCS logo" width="200" height="160" />
               </a>
               <h3>JPCS</h3>
             </div>
 
             <div className="sponsor-logo img">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://tambayan.org/" target="_blank" rel="noopener noreferrer">
                 <img src={tambayanLogo} alt="Tambayan logo" width="200" height="160" />
               </a>
               <h3>TAMBayan TV</h3>
@@ -298,4 +294,4 @@ const Home = () => {
   );
 };
 
-export default Home; 
+export default Home;
