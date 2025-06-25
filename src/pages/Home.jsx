@@ -5,11 +5,14 @@ import './Home.css';
 import heroImage from '../assets/hero.png';
 import cpeoLogo from '../assets/cpeo.png';
 import fticLogo from '../assets/ftic.png';
-import ikigaiLogo from '../assets/Ikigai Animation Studio.png';
-import icorepayLogo from '../assets/iCOREPay.png';
-import zenithpadsLogo from '../assets/ZenithPads.png';
-import geospectrumLogo from '../assets/Geospectrum.png';
-import feltaLogo from '../assets/Felta Multi-Media.jpg';
+import ikigaiLogo from '../assets/ikigai.png';
+import icorepayLogo from '../assets/icorepay.png';
+import zenithpadsLogo from '../assets/zenithpads.png';
+import geospectrumLogo from '../assets/geospectrum.png';
+import feltaLogo from '../assets/felta.jpg';
+import jpcsLogo from '../assets/jpcs.png';
+import tambayanLogo from '../assets/tambayan.png';
+import icpepplmLogo from '../assets/icpep-plm.jpeg';
 
 
 const Home = () => {
@@ -185,7 +188,6 @@ const Home = () => {
 
       
       {/* Sponsors Section */}
-      {/*
       <section className="section sponsors-section">
         <div className="container">
           <h2 className="section-title">Our Sponsors</h2>
@@ -235,8 +237,6 @@ const Home = () => {
           </div>
 
 
-          
-
           <div className="countdown-cta">
             <p className="btn btn-primary">Supported By</p>
           </div>
@@ -255,9 +255,39 @@ const Home = () => {
               <h3>Felta Multi-Media</h3>
             </div>
           </div>
+
+          <div className="countdown-cta">
+            <p className="btn btn-primary">Partnered With</p>
+          </div>
+
+          <div className="sponsors-grid">
+
+            <div className="sponsor-logo img">
+              <a href="https://icpep-plm.com/" target="_blank" rel="noopener noreferrer">
+                <img src={icpepplmLogo} alt="ICPEP-PLM logo" width="200" height="160" />
+              </a>
+              <h3>ICpEP-PLM</h3>
+            </div>
+
+            <div className="sponsor-logo img">
+              <a href="https://www.jpcs.com.ph/" target="_blank" rel="noopener noreferrer">
+                <img src={jpcsLogo} alt="JPCS logo" width="200" height="160" />
+              </a>
+              <h3>JPCS</h3>
+            </div>
+
+            <div className="sponsor-logo img">
+              <a href="https://tambayan.org/" target="_blank" rel="noopener noreferrer">
+                <img src={tambayanLogo} alt="Tambayan logo" width="200" height="160" />
+              </a>
+              <h3>TAMBayan TV</h3>
+            </div>
+
+            </div>
+
         </div>
       </section>
-      */}
+
     </div>
   );
 };

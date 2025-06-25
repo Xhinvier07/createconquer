@@ -329,7 +329,7 @@ const Registration = () => {
                 </div>
                 
                 <div className="consent-buttons">
-                  <a href="/consent-form.pdf" className="btn btn-primary download-btn" target="_blank" rel="noopener noreferrer">
+                  <a href="https://docs.google.com/document/u/1/d/1Oe5gg4woTFtLSCd0bsUd2SELzj44BsB1/edit?usp=sharing&ouid=108629444879544799008&rtpof=true&sd=true" className="btn btn-primary download-btn" target="_blank" rel="noopener noreferrer">
                     <i className="fas fa-download"></i> Download Form
                   </a>
                 </div>
