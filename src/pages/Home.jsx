@@ -9,11 +9,11 @@ import fticLogo from '../assets/ftic.png';
 import ikigaiLogo from '../assets/ikigai.png';
 import icorepayLogo from '../assets/icore.png';
 import zenithpadsLogo from '../assets/zenith.png';
-import geospectrumLogo from '../assets/geospectrum.png';
-import feltaLogo from '../assets/felta.jpg';
-import jpcsLogo from '../assets/jpcs.png';
-import tambayanLogo from '../assets/tambayan.png';
-import icpepplmLogo from '../assets/icpep-plm.jpeg';
+import geospectrumLogo from '../assets/geo.png';
+import feltaLogo from '../assets/felt.jpg';
+import jpcsLogo from '../assets/jpc.png';
+import tambayanLogo from '../assets/tambaya.png';
+import icpepplmLogo from '../assets/icpep-pl.jpeg';
 
 
 
