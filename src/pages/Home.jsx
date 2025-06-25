@@ -7,7 +7,7 @@ import heroImage from '../assets/hero.png';
 import cpeoLogo from '../assets/cpeo.png';
 import fticLogo from '../assets/ftic.png';
 import ikigaiLogo from '../assets/ikigai.png';
-import icorepayLogo from '../assets/icorepay.png';
+import icorepayLogo from '../assets/icore.png';
 import zenithpadsLogo from '../assets/zenithpads.png';
 import geospectrumLogo from '../assets/geospectrum.png';
 import feltaLogo from '../assets/felta.jpg';
@@ -179,6 +179,7 @@ const Home = () => {
               <h3>Computer Engineering Organization (CPEO)</h3>
               <p><i className="fas fa-university"></i> FEU Tech</p>
             </div>
+
             <div className="organizer-card">
               <div className="organizer-logo">
                 <img src={fticLogo} alt="FEU Tech Innovation Center Logo" />
@@ -186,6 +187,7 @@ const Home = () => {
               <h3>FEU Innovation Center</h3>
               <p><i className="fas fa-university"></i> FEU Tech</p>
             </div>
+
           </div>
         </div>
       </section>
@@ -267,21 +269,21 @@ const Home = () => {
           <div className="sponsors-grid">
 
             <div className="sponsor-logo img">
-              <a href="https://icpep-plm.com/" target="_blank" rel="noopener noreferrer">
+              <a href="#" target="_blank" rel="noopener noreferrer">
                 <img src={icpepplmLogo} alt="ICPEP-PLM logo" width="200" height="160" />
               </a>
               <h3>ICpEP-PLM</h3>
             </div>
 
             <div className="sponsor-logo img">
-              <a href="https://www.jpcs.com.ph/" target="_blank" rel="noopener noreferrer">
+              <a href="#" target="_blank" rel="noopener noreferrer">
                 <img src={jpcsLogo} alt="JPCS logo" width="200" height="160" />
               </a>
               <h3>JPCS</h3>
             </div>
 
             <div className="sponsor-logo img">
-              <a href="https://tambayan.org/" target="_blank" rel="noopener noreferrer">
+              <a href="#" target="_blank" rel="noopener noreferrer">
                 <img src={tambayanLogo} alt="Tambayan logo" width="200" height="160" />
               </a>
               <h3>TAMBayan TV</h3>
