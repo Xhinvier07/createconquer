@@ -8,7 +8,7 @@ import cpeoLogo from '../assets/cpeo.png';
 import fticLogo from '../assets/ftic.png';
 import ikigaiLogo from '../assets/ikigai.png';
 import icorepayLogo from '../assets/icore.png';
-import zenithpadsLogo from '../assets/zenithpads.png';
+import zenithpadsLogo from '../assets/zenith.png';
 import geospectrumLogo from '../assets/geospectrum.png';
 import feltaLogo from '../assets/felta.jpg';
 import jpcsLogo from '../assets/jpcs.png';
