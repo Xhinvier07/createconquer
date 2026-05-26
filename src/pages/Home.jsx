@@ -17,7 +17,7 @@ import icpepplmLogo from '../assets/icpep-pl.jpeg';
 
 const Home = () => {
   // Registration deadline date
-  const registrationDeadline = "2025-06-23T23:59:59";
+  const registrationDeadline = "2026-06-20T23:59:59";
 
   return (
     <div className="home-page">
@@ -29,14 +29,14 @@ const Home = () => {
         <div className="container hero-container">
           <div className="hero-flex">
             <div className="hero-logo">
-              <img src={heroImage} alt="Create & Conquer 2025" className="hero-banner" />
+              <img src={heroImage} alt="Create & Conquer 2026" className="hero-banner" />
             </div>
             <div className="hero-content">
-              <h1 className="hero-title">Create & Conquer 2025</h1>
+              <h1 className="hero-title">Create & Conquer 2026</h1>
               <p className="hero-tagline">Bringing together students, visionary thinkers, and developers from across Metro Manila and the Philippines</p>
               <p className="hero-dates">
                 <i className="fas fa-calendar-alt"></i>
-                June 27 - July 5, 2025 
+                June 23 - June 30, 2026 
                 <br></br>
                 <i className="fas fa-map-marker-alt"></i>
               For Metro Manila Participants: FEU Tech Innovation Center, Manila
@@ -58,7 +58,7 @@ const Home = () => {
           <div className="intro-content">
             <h2 className="section-title">About the Hackathon</h2>
             <p className="intro-text">
-              CREATE & CONQUER 2025 Hackathon is the inaugural hackathon organized by the FEU Institute of Technology's 
+              CREATE & CONQUER 2026 Hackathon is organized by the FEU Institute of Technology's 
               Computer Engineering Organization, connecting creative minds and redefining the landscape of innovation.
             </p>
             <div className="intro-features">
@@ -91,12 +91,12 @@ const Home = () => {
             <div className="highlight-card">
               <div className="highlight-icon"><i className="fas fa-calendar-check"></i></div>
               <h3>Event Dates</h3>
-              <p>June 27 - July 5, 2025</p>
+              <p>June 23 - June 30, 2026</p>
             </div>
             <div className="highlight-card">
               <div className="highlight-icon"><i className="fas fa-clipboard-list"></i></div>
               <h3>Registration</h3>
-              <p>June 14 - June 23, 2025</p>
+              <p>June 14 - June 23, 2026</p>
             </div>
           </div>
         </div>
@@ -106,7 +106,7 @@ const Home = () => {
       <section className="section countdown-section">
         <div className="container">
           <h2 className="section-title">Registration Closing In</h2>
-          <p><i className="fas fa-calendar-alt"></i> Registration Period: June 9 - June 23, 2025</p>
+          <p><i className="fas fa-calendar-alt"></i> Registration Period: June 11 - June 20, 2026</p>
           <CountdownTimer targetDate={registrationDeadline} />
           <div className="countdown-cta">
             <Link to="/registration" className="btn btn-primary">Secure Your Spot</Link>
@@ -150,15 +150,15 @@ const Home = () => {
           <div className="important-dates">
             <div className="date-item">
               <h3>Registration</h3>
-              <p><i className="fas fa-calendar-day"></i> June 14 - June 23, 2025</p>
+              <p><i className="fas fa-calendar-day"></i> June 11 - June 20, 2026</p>
             </div>
             <div className="date-item">
               <h3>Orientation & Kickoff</h3>
-              <p><i className="fas fa-flag"></i> June 27, 2025</p>
+              <p><i className="fas fa-flag"></i> June 23, 2026</p>
             </div>
             <div className="date-item">
               <h3>Final Demo Day & Awarding</h3>
-              <p><i className="fas fa-award"></i> July 5, 2025</p>
+              <p><i className="fas fa-award"></i> June 30, 2026</p>
             </div>
           </div>
           <Timeline />
